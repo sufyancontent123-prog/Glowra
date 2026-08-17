@@ -405,77 +405,24 @@ export default function AdminCustomizerTab() {
     analyzeImageDimensions(currentUrl, def);
   };
 
-  // Helper to optimize large device/camera photos before upload
-  const compressImageFile = (file: File, maxDim = 1920, quality = 0.9): Promise<string> => {
-    return new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const src = e.target?.result as string;
-        const img = new Image();
-        img.onload = () => {
-          let { width, height } = img;
-          if (width > maxDim || height > maxDim) {
-            if (width > height) {
-              height = Math.round((height * maxDim) / width);
-              width = maxDim;
-            } else {
-              width = Math.round((width * maxDim) / height);
-              height = maxDim;
-            }
-          }
-          const canvas = document.createElement('canvas');
-          canvas.width = width;
-          canvas.height = height;
-          const ctx = canvas.getContext('2d');
-          if (!ctx) {
-            resolve(src);
-            return;
-          }
-          ctx.drawImage(img, 0, 0, width, height);
-          const mimeType = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
-          try {
-            const compressed = canvas.toDataURL(mimeType, quality);
-            resolve(compressed);
-          } catch {
-            resolve(src);
-          }
-        };
-        img.onerror = () => resolve(src);
-        img.src = src;
-      };
-      reader.onerror = () => resolve('');
-      reader.readAsDataURL(file);
-    });
-  };
-
   // Handle local file selection from device
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !activeImageDef) return;
 
-    if (file.size > 25 * 1024 * 1024) {
-      addToast('error', 'File Too Large', 'Please select an image smaller than 25MB.');
+    if (file.size > 8 * 1024 * 1024) {
+      addToast('error', 'File Too Large', 'Please select an image smaller than 8MB.');
       return;
     }
 
-    setAnalyzingImage(true);
-    try {
-      const dataUrl = await compressImageFile(file);
-      if (dataUrl) {
-        setNewImageAddress(dataUrl);
-        setInputSourceType('file');
-        analyzeImageDimensions(dataUrl, activeImageDef);
-      }
-    } catch {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const dataUrl = event.target?.result as string;
-        setNewImageAddress(dataUrl);
-        setInputSourceType('file');
-        analyzeImageDimensions(dataUrl, activeImageDef);
-      };
-      reader.readAsDataURL(file);
-    }
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target?.result as string;
+      setNewImageAddress(dataUrl);
+      setInputSourceType('file');
+      analyzeImageDimensions(dataUrl, activeImageDef);
+    };
+    reader.readAsDataURL(file);
   };
 
   // Perform replacement
@@ -484,66 +431,61 @@ export default function AdminCustomizerTab() {
 
     let targetUrl = newImageAddress.trim();
 
-    // If it's a locally loaded file or base64 data URL, upload to server database/filesystem
-    if (targetUrl.startsWith('data:image')) {
-      setIsSaving(true);
-      try {
+    setIsSaving(true);
+    try {
+      // If it's a locally loaded file or base64 data URL, upload to server database/filesystem
+      if (targetUrl.startsWith('data:image')) {
         const uploadRes = await uploadImage(targetUrl, activeImageDef.key);
         if (uploadRes.success && uploadRes.url) {
           targetUrl = uploadRes.url;
-        } else {
-          setIsSaving(false);
-          addToast('error', 'Upload Failed', uploadRes.error || 'Could not upload image to server.');
-          return;
         }
-      } catch (err: any) {
-        setIsSaving(false);
-        addToast('error', 'Upload Error', err?.message || 'Server connection error during upload.');
-        return;
       }
-    }
 
-    const key = activeImageDef.key;
-    let updatedImages: Partial<SiteCustomization['images']>;
+      const key = activeImageDef.key;
+      let updatedImages: Partial<SiteCustomization['images']>;
 
-    if (key.startsWith('category:')) {
-      const catKey = key.replace('category:', '');
-      const newCatImages = {
-        ...(draft.images.categoryImages || {}),
-        [catKey]: targetUrl
-      };
-      updatedImages = {
-        ...draft.images,
-        categoryImages: newCatImages
-      };
-    } else {
-      updatedImages = {
-        ...draft.images,
-        [key]: targetUrl
-      };
-    }
-
-    const updatedCustomization: SiteCustomization = {
-      ...draft,
-      images: {
-        ...draft.images,
-        ...updatedImages
+      if (key.startsWith('category:')) {
+        const catKey = key.replace('category:', '');
+        const newCatImages = {
+          ...(draft.images.categoryImages || {}),
+          [catKey]: targetUrl
+        };
+        updatedImages = {
+          ...draft.images,
+          categoryImages: newCatImages
+        };
+      } else {
+        updatedImages = {
+          ...draft.images,
+          [key]: targetUrl
+        };
       }
-    };
 
-    setDraft(updatedCustomization);
-    await updateCustomization(updatedCustomization);
-    await refreshSettings();
-    setIsSaving(false);
+      const updatedCustomization: SiteCustomization = {
+        ...draft,
+        images: {
+          ...draft.images,
+          ...updatedImages
+        }
+      };
 
-    playAudio('checkoutSuccess');
-    addToast(
-      'success',
-      'Image Replaced & Saved! 📸',
-      `"${activeImageDef.title}" is now saved to database and live across all devices (Mobile & Laptop).`
-    );
-    setActiveImageDef(null);
-    setNewImageAddress('');
+      setDraft(updatedCustomization);
+      await updateCustomization(updatedCustomization);
+      await refreshSettings();
+
+      playAudio('checkoutSuccess');
+      addToast(
+        'success',
+        'Image Replaced & Saved! 📸',
+        `"${activeImageDef.title}" is now saved to database and live across all devices (Mobile & Laptop).`
+      );
+      setActiveImageDef(null);
+      setNewImageAddress('');
+    } catch (err: any) {
+      addToast('error', 'Update Failed', err?.message || 'Failed to update image.');
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   // Apply a preset to draft and live site
@@ -1586,19 +1528,14 @@ export default function AdminCustomizerTab() {
                   <button
                     type="button"
                     onClick={handleConfirmImageReplacement}
-                    disabled={!newImageAddress.trim() || analyzingImage || isSaving || dimensionStatus.severity === 'error'}
+                    disabled={!newImageAddress.trim() || analyzingImage || dimensionStatus.severity === 'error'}
                     className={`px-6 py-2.5 text-white text-xs font-bold rounded-2xl shadow-sm transition-all flex items-center gap-2 cursor-pointer ${
                       dimensionStatus.severity === 'warning'
                         ? 'bg-amber-600 hover:bg-amber-700'
                         : 'bg-pink-600 hover:bg-pink-700'
                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
-                    {isSaving ? (
-                      <>
-                        <RefreshCw className="w-4 h-4 animate-spin" />
-                        <span>Uploading &amp; Saving...</span>
-                      </>
-                    ) : analyzingImage ? (
+                    {analyzingImage ? (
                       <>
                         <RefreshCw className="w-4 h-4 animate-spin" />
                         <span>Validating...</span>

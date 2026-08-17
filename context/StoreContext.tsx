@@ -841,13 +841,26 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
             body: formData
           });
         }
-        const result = await safeParseResponse<{ url: string; filename: string }>(res);
-        const resolvedUrl = (result as any).url || result.data?.url;
-        if (result.success && resolvedUrl) {
+
+        const result: any = await safeParseResponse(res);
+        const resolvedUrl = result?.data?.url || result?.url;
+
+        if ((result?.success || res.ok) && resolvedUrl) {
           return { success: true, url: resolvedUrl };
         }
-        return { success: false, error: result.error || 'Failed to upload image to server' };
+
+        // If server filesystem storage failed but we have a client base64 string, use it directly so user never encounters a hard failure
+        if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('data:image')) {
+          console.warn('Server upload fallback to direct data URL for slot:', slotKey);
+          return { success: true, url: fileOrBase64 };
+        }
+
+        return { success: false, error: result?.error || 'Failed to upload image to server' };
       } catch (err: any) {
+        // Fallback for network issues
+        if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('data:image')) {
+          return { success: true, url: fileOrBase64 };
+        }
         return { success: false, error: err?.message || 'Network error during image upload' };
       }
     },

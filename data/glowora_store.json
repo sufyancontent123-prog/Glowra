@@ -1,0 +1,1429 @@
+{
+  "products": [
+    {
+      "id": "prod-cetaphil-sun",
+      "name": "Clinical Sun Shield & Calming Facial Treatment",
+      "category": "Sensitive Skin",
+      "subcategory": "Facial Treatments",
+      "price": 35,
+      "originalPrice": 48,
+      "rating": 4.9,
+      "reviewsCount": 696,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
+      "volume": "45 Mins Session",
+      "description": "Comprehensive in-salon soothing facial treatment designed for hyper-reactive or sun-sensitized skin. Includes gentle botanical cleansing, cooling aloe compress, and broad-spectrum cellular shield infusion.",
+      "ingredients": [
+        "Cellular Protection Complex",
+        "Vitamin E Infusion",
+        "Pure Aloe Vera Concentrate",
+        "Hypoallergenic Calming Serum"
+      ],
+      "benefits": [
+        "Instantly calms skin redness & heat",
+        "Restores natural skin comfort",
+        "Zero downtime or irritation",
+        "Conducted in sterilized private suite"
+      ],
+      "howToUse": "Performed by senior esthetician: double cleanse, soothing ultrasonic massage, and UV protection application.",
+      "inStock": true,
+      "featured": true,
+      "isSensitiveCare": true
+    },
+    {
+      "id": "prod-daily-exfoliating",
+      "name": "Gentle Micro-Buff & Exfoliating Facial",
+      "category": "Sensitive Skin",
+      "subcategory": "Facial Treatments",
+      "price": 45,
+      "originalPrice": 60,
+      "rating": 4.8,
+      "reviewsCount": 1906,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1556228722-d0b5d03a5be6?q=80&w=800&auto=format&fit=crop",
+      "volume": "50 Mins Session",
+      "description": "Gentle dermatological exfoliation service that removes dead cellular buildup without stripping essential moisture. Leaves the skin velvety soft and deeply purified.",
+      "ingredients": [
+        "Enzymatic Bamboo Micro-Polish",
+        "Pro-Vitamin B5",
+        "Organic Chamomile Extract",
+        "Hydrating Glycerin Infusion"
+      ],
+      "benefits": [
+        "Clears congested pores safely",
+        "Restores smooth skin texture",
+        "Hypoallergenic & allergy-tested",
+        "Includes customized hydro-jelly mask"
+      ],
+      "howToUse": "Gentle steam exfoliation followed by cold mist soothing and protective ceramide moisturizer seal.",
+      "inStock": true,
+      "featured": true,
+      "isSensitiveCare": true
+    },
+    {
+      "id": "prod-advanced-relief",
+      "name": "Intensive Ceramide Barrier Repair Derma-Facial",
+      "category": "Sensitive Skin",
+      "subcategory": "Facial Treatments",
+      "price": 55,
+      "originalPrice": 75,
+      "rating": 4.9,
+      "reviewsCount": 2800,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1608248597249-c976906e6188?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Clinical in-salon deep barrier restoration for dry, stressed, or irritated skin. Delivers 48-hour continuous cellular hydration and strengthens delicate lipid layers.",
+      "ingredients": [
+        "Bio-Identical Ceramide NP",
+        "Multi-Weight Hyaluronic Acid",
+        "Colloidal Oatmeal Mask",
+        "Shea Butter Emulsion"
+      ],
+      "benefits": [
+        "Deeply nourishes compromised barrier",
+        "Eliminates dry flaking and tightness",
+        "Cryo-globe lymphatic cooling",
+        "Recommended before bridal makeovers"
+      ],
+      "howToUse": "Multi-layer barrier infusion with gentle vacuum lymphatic drainage and soothing thermal mask.",
+      "inStock": true,
+      "featured": true,
+      "isSensitiveCare": true
+    },
+    {
+      "id": "prod-peach-70-serum",
+      "name": "Peach 70 Niacin Glass-Skin Hydrafacial",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 65,
+      "originalPrice": 90,
+      "rating": 5,
+      "reviewsCount": 1420,
+      "tag": "70% Peach Extract",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Our signature Korean Glass-Skin salon facial featuring 70% fermented peach extract and 5% niacinamide ultrasonic infusion. Unclogs pores, refines texture, and delivers an instant mirror-like radiance.",
+      "ingredients": [
+        "70% Fermented Prunus Persica Extract",
+        "5% Niacinamide Active Ampoule",
+        "Triple Hyaluronic Acid",
+        "Cryo Ice-Globe Massage"
+      ],
+      "benefits": [
+        "Instant dewy glass-skin luminescence",
+        "Fades dullness and blemish shadows",
+        "Ultrasonic deep pore extraction",
+        "Includes relaxing neck & shoulder massage"
+      ],
+      "howToUse": "Multi-step clinical facial: gentle steam cleanse, vortex extraction, peach ampoule infusion, and cold-hammer seal.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-anti-pigmentation",
+      "name": "Catalyst Anti-Pigmentation & Brightening Facial",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 75,
+      "originalPrice": 105,
+      "rating": 4.9,
+      "reviewsCount": 890,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop",
+      "volume": "75 Mins Session",
+      "description": "Specialized aesthetic salon therapy targeting stubborn dark spots, sun discoloration, and uneven tone with medical-grade Tranexamic, Kojic, and Alpha Arbutin active infusions.",
+      "ingredients": [
+        "Tranexamic Acid 3% Ampoule",
+        "Alpha Arbutin 2%",
+        "Kojic Radiance Peel",
+        "Antioxidant Vitamin C Infusion"
+      ],
+      "benefits": [
+        "Visibly brightens pigmented zones",
+        "Accelerates cellular turnover",
+        "Evens patchy skin tone",
+        "Conducted with high-frequency LED light therapy"
+      ],
+      "howToUse": "Aesthetician preps skin with gentle enzymatic peel, introduces brightening serum via galvanic probe, and applies cooling gold mask.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-curated-essentials-bundle",
+      "name": "Full Bridal & Makeover Salon Day Package",
+      "category": "Skin Care",
+      "subcategory": "Salon Packages",
+      "price": 180,
+      "originalPrice": 260,
+      "rating": 5,
+      "reviewsCount": 3120,
+      "tag": "Sale",
+      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+      "volume": "3.5 Hours Full Session",
+      "description": "The ultimate all-inclusive salon pampering ritual: includes Signature Glass-Skin Facial, Luxury Keratin Hair Spa, Full Hand & Feet Scrub, and Express Signature Makeover.",
+      "ingredients": [
+        "Glass Skin Facial Protocol",
+        "Keratin Smoothing Hair Treatment",
+        "Hand & Foot Herb Scrub",
+        "Luminous Event Makeover"
+      ],
+      "benefits": [
+        "Complete head-to-toe beauty transformation",
+        "Save $80 over individual service bookings",
+        "Complimentary herbal tea & refreshments",
+        "Private VIP bridal suite"
+      ],
+      "howToUse": "Customized full-day itinerary scheduled with master stylists and estheticians.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-vitamin-c-serum",
+      "name": "Vitamin C Radiance & Glow Facial Service",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 50,
+      "originalPrice": 70,
+      "rating": 4.8,
+      "reviewsCount": 2310,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=800&auto=format&fit=crop",
+      "volume": "50 Mins Session",
+      "description": "High-potency 15% L-Ascorbic Acid and Ferulic in-salon infusion that combats dullness, boosts collagen production, and restores a vibrant sun-kissed glow.",
+      "ingredients": [
+        "15% L-Ascorbic Acid Ampoule",
+        "1% Vitamin E Oil",
+        "Ferulic Acid Booster",
+        "Collagen Sheet Mask"
+      ],
+      "benefits": [
+        "Instant luminous clarity",
+        "Guards against urban pollution",
+        "Fades fatigue marks",
+        "Includes relaxing facial acupressure"
+      ],
+      "howToUse": "Exfoliation, Vitamin C micro-mist, galvanic iontophoresis, and cold-compress finish.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-hydrating-face-cream",
+      "name": "Hydra-Dew Multi-Hyaluronic Plumping Facial",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 45,
+      "originalPrice": 65,
+      "rating": 4.8,
+      "reviewsCount": 1845,
+      "tag": "Sale",
+      "image": "https://images.unsplash.com/photo-1567928815104-b63795123d57?q=80&w=800&auto=format&fit=crop",
+      "volume": "50 Mins Session",
+      "description": "Intensive quenching facial delivering multi-weight hyaluronic acid deep into the dermis to plump fine dehydration lines and lock in 72-hour moisture.",
+      "ingredients": [
+        "Centella Asiatica Soothing Gel",
+        "Plant-derived Squalane",
+        "Multi-Molecular Hyaluronic Acid",
+        "Thermal Hydrating Wrap"
+      ],
+      "benefits": [
+        "Intense hydration cushion",
+        "Immediate supple bounce",
+        "Soothes redness & irritation",
+        "Great pre-event skin prep"
+      ],
+      "howToUse": "Ultrasonic cleansing, deep hydra-massage, hyaluronic serum infusion, and cooling collagen mask.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-keratin-shampoo",
+      "name": "Keratin Smoothing & Protein Hair Spa Service",
+      "category": "Hair Care",
+      "subcategory": "Hair Treatments",
+      "price": 60,
+      "originalPrice": 85,
+      "rating": 4.9,
+      "reviewsCount": 940,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Restorative deep conditioning and keratin infusion treatment that repairs heat and color-damaged cuticles, eliminates frizz, and imparts high mirror shine.",
+      "ingredients": [
+        "Hydrolyzed Keratin Protein",
+        "Bamboo Bio-Fiber",
+        "Moroccan Argan Extract",
+        "Steam Scalp Therapy"
+      ],
+      "benefits": [
+        "Tames rebellious frizz 100%",
+        "Restores hair elasticity & strength",
+        "Includes blow-dry & styling",
+        "Long lasting smoothness for 4-6 weeks"
+      ],
+      "howToUse": "Clarifying scalp wash, warm keratin masque application, 20-minute ozone steam, and blowout.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-aloe-vera-gel",
+      "name": "Organic Aloe Cooling Body Spa & Wrap",
+      "category": "Body Care",
+      "subcategory": "Body Treatments",
+      "price": 55,
+      "originalPrice": 75,
+      "rating": 4.9,
+      "reviewsCount": 3100,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Refreshing full-body soothing wrap with cold-pressed organic aloe vera, cucumber gel, and green tea to soothe sun-exposed or tired skin.",
+      "ingredients": [
+        "99% Organic Cold-Pressed Aloe",
+        "Fresh Cucumber Extract",
+        "Green Tea Antioxidants",
+        "Calming Essential Oils"
+      ],
+      "benefits": [
+        "Total full-body cooling relief",
+        "Deep skin replenishment",
+        "Relieves muscle stress & fatigue",
+        "Includes gentle scalp & foot massage"
+      ],
+      "howToUse": "Gentle dry-brushing followed by cooling aloe body wrap, thermal blanket, and warm towel finish.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-matte-lipstick",
+      "name": "Velvet Lip & Makeup Touchup Artistry Session",
+      "category": "Makeup",
+      "subcategory": "Makeover Services",
+      "makeupType": "Lip",
+      "makeupStyles": [
+        "Matte",
+        "HD / Airbrush",
+        "Smokey Eye"
+      ],
+      "price": 25,
+      "originalPrice": 35,
+      "rating": 4.8,
+      "reviewsCount": 1650,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800&auto=format&fit=crop",
+      "volume": "30 Mins Express Session",
+      "description": "Express beauty session focusing on precision lip shaping, velvet matte or glass-gloss color customization, lip contouring, and setting for 12-hour wear.",
+      "ingredients": [
+        "Jojoba Seed Nourishing Base",
+        "Micro-Mineral Pigments",
+        "Plumping Peptides",
+        "Long-wear Setting Veil"
+      ],
+      "benefits": [
+        "Flawless transfer-resistant lip finish",
+        "Custom shade blending by makeup artist",
+        "Plumping and lip smoothing prep",
+        "Perfect quick service before dinners & parties"
+      ],
+      "howToUse": "Exfoliating lip scrub, hydration mask, precision liner mapping, and customized velvet lipstick application.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-niacinamide-zinc",
+      "name": "Niacinamide Pore-Refining Clinical Facial",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 50,
+      "originalPrice": 70,
+      "rating": 4.8,
+      "reviewsCount": 184,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1608248597359-561330366a5a?q=80&w=800&auto=format&fit=crop",
+      "volume": "55 Mins Session",
+      "description": "Clinical in-salon treatment regulating excess oil, clearing congested sebum, tightening dilated pores, and reducing active blemishes.",
+      "ingredients": [
+        "10% Niacinamide Clinical Serum",
+        "1% Zinc PCA",
+        "High-Frequency Antibacterial Wand",
+        "Tea Tree Hydro-Jelly Mask"
+      ],
+      "benefits": [
+        "Reduces oiliness and shine",
+        "Refines large pores",
+        "Prevents acne breakouts",
+        "Includes blackhead extraction"
+      ],
+      "howToUse": "Enzyme cleanse, steam extraction, high-frequency wand application, and pore-minimizing clay mask.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-rose-water-toner",
+      "name": "Pure Damask Rose Facial Refresh Service",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 35,
+      "originalPrice": 50,
+      "rating": 4.9,
+      "reviewsCount": 142,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=800&auto=format&fit=crop",
+      "volume": "35 Mins Express Session",
+      "description": "Quick revitalizing facial utilizing steam-distilled organic rose water, rose petal compress, and gentle facial drainage to rebalance pH and awaken tired skin.",
+      "ingredients": [
+        "100% Rosa Damascena Flower Distillate",
+        "Vegetable Glycerin",
+        "Rose Quartz Eye Mask",
+        "Calming Aromatherapy"
+      ],
+      "benefits": [
+        "Instant skin rejuvenation",
+        "Soothes puffiness & dark circles",
+        "100% organic botanicals",
+        "Ideal midday pick-me-up"
+      ],
+      "howToUse": "Gentle cleansing, warm rose steam, pressure point facial massage, and chilled rose mist.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-tea-tree-wash",
+      "name": "Tea Tree Purifying Acne & Pore Detox Facial",
+      "category": "Skin Care",
+      "subcategory": "Facials & Peels",
+      "price": 55,
+      "originalPrice": 75,
+      "rating": 4.8,
+      "reviewsCount": 95,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Deep clearing salon facial utilizing Australian tea tree oil, salicylic acid peel, and blue LED light therapy to eliminate acne-causing bacteria and calm breakouts.",
+      "ingredients": [
+        "Pure Australian Tea Tree Oil",
+        "Salicylic Acid 2% Chemical Peel",
+        "Blue LED Light Treatment",
+        "Soothing Centella Serum"
+      ],
+      "benefits": [
+        "Kills acne bacteria and clears blemishes",
+        "Unclogs deep blackheads & whiteheads",
+        "Reduces redness and inflammation",
+        "Includes soothing cryo-seal"
+      ],
+      "howToUse": "Double cleanse, ultrasonic peel extraction, blue light therapy, and cooling tea tree mask.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-argan-hair-oil",
+      "name": "Moroccan Argan Luxury Hair Spa & Blowout",
+      "category": "Hair Care",
+      "subcategory": "Hair Treatments",
+      "price": 55,
+      "originalPrice": 75,
+      "rating": 4.9,
+      "reviewsCount": 203,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Nourishing botanical hair spa service infused with cold-pressed Moroccan argan oil and vitamin E. Restores silky bounce, seals split ends, and includes designer blowout.",
+      "ingredients": [
+        "100% Cold-Pressed Argan Oil",
+        "Sweet Almond Essential Complex",
+        "Thermal Ozone Steamer",
+        "Heat-Protectant Shine Serum"
+      ],
+      "benefits": [
+        "Silky soft and luminous strands",
+        "Thermal protection up to 450°F",
+        "Scalp detox & circulation massage",
+        "Includes signature blowout styling"
+      ],
+      "howToUse": "Scalp massage with warm argan elixir, steam infusion, rinse, and blow-dry styling.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-lavender-bath-salt",
+      "name": "Lavender Hydro-Therapy & Body Scrub Ritual",
+      "category": "Body Care",
+      "subcategory": "Body Treatments",
+      "price": 65,
+      "originalPrice": 90,
+      "rating": 4.9,
+      "reviewsCount": 88,
+      "tag": "Sale",
+      "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
+      "volume": "75 Mins Session",
+      "description": "Luxurious in-salon spa ritual featuring Dead Sea mineral salts, French lavender essential oils, gentle full-body exfoliation, and relaxing hydro-massage.",
+      "ingredients": [
+        "Dead Sea Mineral Crystals",
+        "French Lavender Essential Oil",
+        "Cold-Pressed Sweet Almond Oil",
+        "Dried Chamomile Infusion"
+      ],
+      "benefits": [
+        "Relieves deep muscle tension & stress",
+        "Leaves skin incredibly smooth & glowing",
+        "Aromatherapeutic tranquility",
+        "Includes warm shower & hydrating body butter"
+      ],
+      "howToUse": "Full-body dry scrub, hydro-bath soak, and soothing lavender oil massage.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-wellness-gua-sha",
+      "name": "Rose Quartz Lymphatic Sculpting & Contouring Facial",
+      "category": "Health & Wellness",
+      "subcategory": "Spa Therapies",
+      "price": 45,
+      "originalPrice": 65,
+      "rating": 5,
+      "reviewsCount": 420,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1512290900672-1f41634b8c6f?q=80&w=800&auto=format&fit=crop",
+      "volume": "45 Mins Session",
+      "description": "Holistic facial therapy utilizing authentic rose quartz crystals and gua sha stones to stimulate lymphatic drainage, relieve facial tension, and sculpt cheekbone contours.",
+      "ingredients": [
+        "100% Brazilian Rose Quartz Crystals",
+        "Botanical Facial Oil Elixir",
+        "Acupressure Point Stimulation",
+        "Chilled Crystal Roller"
+      ],
+      "benefits": [
+        "Immediately depuffs face & eye area",
+        "Defines jawline & cheekbone contours",
+        "Boosts collagen & blood flow",
+        "Deeply relaxing meditative experience"
+      ],
+      "howToUse": "Gentle facial cleanse, botanical oil application, rhythmic sculpting gua sha strokes, and cryo roller finish.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-wellness-herbal-tea",
+      "name": "Holistic Glow Herbal Detox Spa & Foot Soak Ritual",
+      "category": "Health & Wellness",
+      "subcategory": "Spa Therapies",
+      "price": 40,
+      "originalPrice": 55,
+      "rating": 4.8,
+      "reviewsCount": 310,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800&auto=format&fit=crop",
+      "volume": "45 Mins Session",
+      "description": "Holistic relaxation session combining warm botanical herbal foot soak, reflexology point massage, shoulder de-stress acupressure, and fresh chamomile-rose wellness infusion.",
+      "ingredients": [
+        "Organic Chamomile & Rose Foot Bath",
+        "Epsom Salt Foot Soak",
+        "Essential Oil Massage Balm",
+        "Herbal Detox Infusion Beverage"
+      ],
+      "benefits": [
+        "Relieves tired feet and legs",
+        "Calms nervous system and reduces stress",
+        "Improves circulation",
+        "Complimentary fresh herbal tea served"
+      ],
+      "howToUse": "Warm aromatic foot soak, exfoliating scrub, pressure-point reflexology, and heated neck wrap.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-wellness-lavender-oil",
+      "name": "Pure French Lavender Aromatherapy Massage Service",
+      "category": "Health & Wellness",
+      "subcategory": "Spa Therapies",
+      "price": 70,
+      "originalPrice": 95,
+      "rating": 5,
+      "reviewsCount": 560,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=800&auto=format&fit=crop",
+      "volume": "60 Mins Session",
+      "description": "Therapeutic full-body relaxation massage utilizing warm 100% pure French lavender essential oil to release deep muscular tension, soothe stress, and promote restorative sleep.",
+      "ingredients": [
+        "100% Pure French Lavender Essential Oil",
+        "Warm Jojoba Carrier Oil",
+        "Aromatherapy Diffuser Blend",
+        "Heated Herbal Towels"
+      ],
+      "benefits": [
+        "Releases neck, back & shoulder knots",
+        "Induces profound mental and bodily calm",
+        "Hydrates and softens dry skin",
+        "Conducted in tranquil soundproof suite"
+      ],
+      "howToUse": "Customized pressure consultation, full-body aromatherapy Swedish massage, and warm towel compress.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-mehndi-bridal-hands",
+      "name": "Royal Dulhan Bridal Hand Mehndi Design",
+      "category": "Mehndi Designs",
+      "subcategory": "Hands - Bridal",
+      "price": 85,
+      "originalPrice": 115,
+      "rating": 5,
+      "reviewsCount": 420,
+      "tag": "Bestseller",
+      "image": "/images/mehndi_bridal_hands_1786879695626.jpg",
+      "volume": "Full Both Hands & Forearms (Includes Stencil + 4 Organic Cones)",
+      "description": "Ultra-intricate Royal Dulhan bridal Mehndi design featuring ornate peacock pairs, delicate mandala wrists, intricate jali mesh lace, and floral paisleys. Yields a deep mahogany-burgundy stain.",
+      "ingredients": [
+        "100% Rajasthani Organic Sojat Henna",
+        "Eucalyptus & Tea Tree Essential Oils",
+        "Clove Oil",
+        "Lemon Sugar Glaze Sealant"
+      ],
+      "benefits": [
+        "Rich 48-hour peak dark stain",
+        "Long-lasting 10-14 days",
+        "Zero chemical dyes or PPD",
+        "Step-by-step master application template included"
+      ],
+      "howToUse": "Apply paste with fine-tip cone, let dry 4-6 hours, dab lemon-sugar syrup, and scrape gently without water for 12 hours.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-mehndi-arabic-feet",
+      "name": "Arabic Floral Feet & Anklet Mehndi Design",
+      "category": "Mehndi Designs",
+      "subcategory": "Feet - Arabic",
+      "price": 35,
+      "originalPrice": 48,
+      "rating": 4.9,
+      "reviewsCount": 310,
+      "tag": "Top Rated",
+      "image": "/images/mehndi_arabic_feet_1786879714547.jpg",
+      "volume": "Both Feet & Ankles (Includes 2 Fine Cones + Sealant Spray)",
+      "description": "Graceful and breezy Arabic henna art contouring the feet with floral vine cascades, delicate lace anklet cuffs, and elegant open space geometry.",
+      "ingredients": [
+        "Pure Organic Henna Powder",
+        "Lavender Essential Oil",
+        "Natural Cane Sugar",
+        "Distilled Rose Water"
+      ],
+      "benefits": [
+        "Quick 20-minute application",
+        "Deep chestnut color",
+        "Gentle on sensitive skin",
+        "Perfect for weddings, parties & Eid"
+      ],
+      "howToUse": "Trace the floral vine starting from the big toe leading up across the instep to the ankle bracelet band.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-mehndi-minimal-hands",
+      "name": "Modern Minimalist Mandala Hand Henna",
+      "category": "Mehndi Designs",
+      "subcategory": "Hands - Minimalist",
+      "price": 22,
+      "originalPrice": 30,
+      "rating": 4.8,
+      "reviewsCount": 195,
+      "tag": "New",
+      "image": "/images/mehndi_minimal_hands_1786879730597.jpg",
+      "volume": "Both Palms & Fingers (Includes 2 Precision Cones)",
+      "description": "Chic contemporary Bohemian minimalist design centering a dainty solar mandala on the palm with delicate chevron finger rings and wrist chain accents.",
+      "ingredients": [
+        "Organic Sojat Henna",
+        "Eucalyptus Oil",
+        "Pure Molasses",
+        "Tea Tree Infusion"
+      ],
+      "benefits": [
+        "Dries in 15 minutes",
+        "Understated luxury aesthetic",
+        "Skin-nourishing essential oils",
+        "Includes precision transfer stencil"
+      ],
+      "howToUse": "Draw the central focal mandala first, then complete delicate knuckle line patterns and wrist bracelet.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-mehndi-dulhan-feet",
+      "name": "Grand Traditional Bridal Dulhan Feet Mehndi",
+      "category": "Mehndi Designs",
+      "subcategory": "Feet - Bridal",
+      "price": 65,
+      "originalPrice": 90,
+      "rating": 4.9,
+      "reviewsCount": 280,
+      "tag": "Bestseller",
+      "image": "/images/mehndi_dulhan_feet_1786879748808.jpg",
+      "volume": "Full Bridal Feet & Shin Coverage (Includes 3 Henna Cones + Aftercare Balm)",
+      "description": "Heavy traditional bridal foot Mehndi adorned with dense lotus carvings, checks-jali, intricate toe caps, and royal paisley side bands extending up the calf.",
+      "ingredients": [
+        "Triple-Sifted Organic Henna",
+        "Nilgiri Eucalyptus Extract",
+        "Cold-Pressed Clove Oil",
+        "Beeswax Sealant Balm"
+      ],
+      "benefits": [
+        "Intense dark maroon stain",
+        "Waterproof aftercare balm included",
+        "Long durability 12-16 days",
+        "Traditional dulhan ceremony favorite"
+      ],
+      "howToUse": "Cover soles edges and toes first, then craft the dense jaal pattern upward to the mid-calf.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-mehndi-khafif-hands",
+      "name": "Khafif Gulf Floral Hands Henna Art",
+      "category": "Mehndi Designs",
+      "subcategory": "Hands - Indo-Arabic",
+      "price": 42,
+      "originalPrice": 55,
+      "rating": 4.7,
+      "reviewsCount": 165,
+      "tag": "Sale",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800&auto=format&fit=crop",
+      "volume": "Full Back-Hand & Wrist Pair (Includes 2 Gulf Dark Cones)",
+      "description": "Exquisite Gulf Khafif style highlighting bold floral outlines shaded with fine micro-hatching, cascading diagonal trails, and decorative cuff bands.",
+      "ingredients": [
+        "Dark Henna Paste",
+        "Eucalyptus Leaf Extract",
+        "Fructose Syrup",
+        "Rosemary Oil"
+      ],
+      "benefits": [
+        "High contrast shading",
+        "Fast stain development (24h)",
+        "All-natural plant formulation",
+        "Free design flash card"
+      ],
+      "howToUse": "Outline large petals with steady pressure, fill with 45-degree micro-shading strokes, and let rest.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-mehndi-jaal-feet",
+      "name": "Festive Jaal Net & Toe Ring Feet Henna",
+      "category": "Mehndi Designs",
+      "subcategory": "Feet - Casual & Party",
+      "price": 28,
+      "originalPrice": 38,
+      "rating": 4.8,
+      "reviewsCount": 140,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1590736969955-71cc94801759?q=80&w=800&auto=format&fit=crop",
+      "volume": "Feet Tops & Toe Bands (Includes 2 Cones)",
+      "description": "Delicate diagonal net jaal with micro-dot intersections across the instep, paired with ornate toe ring bands and side scallop borders.",
+      "ingredients": [
+        "Organic Henna Leaf Powder",
+        "Tea Tree Oil",
+        "Cane Sugar Sealant",
+        "Almond Oil"
+      ],
+      "benefits": [
+        "Clean modern geometry",
+        "Crisp line definition",
+        "Quick drying",
+        "Great for sangeet & festive gatherings"
+      ],
+      "howToUse": "Lay down grid lines evenly across the instep and place fine dots at each crosshair.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-primer",
+      "name": "Hydro-Grip Pore-Blurring Face Primer",
+      "category": "Makeup",
+      "subcategory": "Face Products",
+      "makeupType": "Face",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Matte",
+        "Dewy / Glowy",
+        "HD / Airbrush"
+      ],
+      "price": 24,
+      "originalPrice": 32,
+      "rating": 4.9,
+      "reviewsCount": 520,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop",
+      "volume": "30ml Gel-Base Bottle",
+      "description": "Primer: A base gel or cream used before foundation. Creates a smooth, blurred canvas that grips makeup for 16-hour crease-proof wear.",
+      "ingredients": [
+        "Hyaluronic Acid 2%",
+        "Niacinamide",
+        "Aloe Water",
+        "Agave Extract"
+      ],
+      "benefits": [
+        "A base gel or cream used before foundation",
+        "Blurs enlarged pores & texture",
+        "Prevents foundation oxidation",
+        "Hydrating gel texture"
+      ],
+      "howToUse": "Pump 1-2 drops onto clean fingers and blend evenly over the face before applying foundation. Wait 60 seconds to set.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-foundation",
+      "name": "Lumi-Silk Breathable Liquid Foundation",
+      "category": "Makeup",
+      "subcategory": "Face Products",
+      "makeupType": "Face",
+      "makeupStyles": [
+        "Matte",
+        "Dewy / Glowy",
+        "HD / Airbrush"
+      ],
+      "price": 34,
+      "originalPrice": 45,
+      "rating": 4.8,
+      "reviewsCount": 780,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1631730486784-545631bc2a0b?q=80&w=800&auto=format&fit=crop",
+      "volume": "35ml Pump Glass Bottle",
+      "description": "Foundation: Liquid or cream skin-tone base. Provides buildable medium-to-full coverage with a seamless skin-like luminous finish that never cakes.",
+      "ingredients": [
+        "Plant Squalane",
+        "Vitamin E",
+        "Micro-Mineral Pigments",
+        "Rosehip Seed Oil"
+      ],
+      "benefits": [
+        "Liquid or cream skin-tone base",
+        "Seamless 24-hour weightless coverage",
+        "Evens skin discoloration",
+        "Non-comedogenic & dermatologist tested"
+      ],
+      "howToUse": "Apply 1-2 pumps onto the back of your hand and buff into skin using a damp sponge or foundation brush.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-concealer",
+      "name": "Total Camouflage Cream Concealer",
+      "category": "Makeup",
+      "subcategory": "Face Products",
+      "makeupType": "Face",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Matte",
+        "HD / Airbrush",
+        "Smokey Eye"
+      ],
+      "price": 18,
+      "originalPrice": 25,
+      "rating": 4.9,
+      "reviewsCount": 640,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1599733589046-10c005738ef0?q=80&w=800&auto=format&fit=crop",
+      "volume": "10ml Precision Wand",
+      "description": "Concealer: Thick cream to hide spots or dark circles. High-coverage creamy formula enriched with caffeine and peptides to instantly erase blemishes.",
+      "ingredients": [
+        "Caffeine Extract",
+        "Peptide Complex",
+        "Shea Butter",
+        "Centella Asiatica"
+      ],
+      "benefits": [
+        "Thick cream to hide spots or dark circles",
+        "Crease-resistant 18-hour hold",
+        "Brightens under-eye shadows",
+        "Self-setting velvety finish"
+      ],
+      "howToUse": "Dot directly onto blemishes, dark under-eye circles, or redness, and gently blend with fingertip or small brush.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-bb-cream",
+      "name": "Hydra-Dew Tinted Moisturizer / BB Cream",
+      "category": "Makeup",
+      "subcategory": "Face Products",
+      "makeupType": "Face",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Dewy / Glowy"
+      ],
+      "price": 26,
+      "originalPrice": 35,
+      "rating": 4.8,
+      "reviewsCount": 410,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
+      "volume": "50ml Squeeze Tube",
+      "description": "Tinted Moisturizer / BB Cream: Light, skin-hydrating coverage. 3-in-1 multi-tasker combining deep hydration, broad-spectrum SPF 30, and a sheer natural tint.",
+      "ingredients": [
+        "SPF 30 Mineral Zinc",
+        "Hyaluronic Acid",
+        "Green Tea Extract",
+        "Jojoba Oil"
+      ],
+      "benefits": [
+        "Light, skin-hydrating coverage",
+        "Natural dewy second-skin glow",
+        "SPF 30 daily sun protection",
+        "Evens skin tone effortlessly"
+      ],
+      "howToUse": "Smooth generously over cleansed face using clean fingers like a daily moisturizer for an effortless fresh face.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-setting-powder-spray",
+      "name": "All-Day Lock Setting Powder & Mist Duo",
+      "category": "Makeup",
+      "subcategory": "Face Products",
+      "makeupType": "Face",
+      "makeupStyles": [
+        "Matte",
+        "HD / Airbrush",
+        "Smokey Eye"
+      ],
+      "price": 22,
+      "originalPrice": 30,
+      "rating": 4.9,
+      "reviewsCount": 390,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+      "volume": "20g Powder + 100ml Mist",
+      "description": "Setting Powder / Spray: Locks makeup in place. Ultra-fine translucent silica powder and micro-mist spray duo that prevents shine, smudging, and transfer all day.",
+      "ingredients": [
+        "Micro-Fine Silica",
+        "Niacinamide",
+        "Aloe Mist",
+        "Witch Hazel Extract"
+      ],
+      "benefits": [
+        "Locks makeup in place",
+        "Zero flashback for 4K HD cameras",
+        "Controls midday oily shine",
+        "Waterproof lock for 24 hours"
+      ],
+      "howToUse": "Dust translucent powder onto T-zone with a fluffy brush, then spritz setting mist in an X and T motion over the face.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-blush",
+      "name": "Petal Silk Soft Powder & Cream Blush",
+      "category": "Makeup",
+      "subcategory": "Cheek Products",
+      "makeupType": "Cheek",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Dewy / Glowy",
+        "Matte"
+      ],
+      "price": 19,
+      "originalPrice": 26,
+      "rating": 4.9,
+      "reviewsCount": 490,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
+      "volume": "8g Compact (Peach & Pink Duo)",
+      "description": "Blush: Adds pink or peach color to cheeks. Silky micronized formula that melts seamlessly into the skin for a healthy, youthful flush of color.",
+      "ingredients": [
+        "Micronized Mineral Pigments",
+        "Vitamin E",
+        "Shea Butter",
+        "Chamomile Extract"
+      ],
+      "benefits": [
+        "Adds pink or peach color to cheeks",
+        "Buildable sheer-to-vibrant tint",
+        "Silky blendable texture",
+        "Long-lasting 12-hour wear"
+      ],
+      "howToUse": "Smile and sweep across the apples of cheeks, blending upwards toward the temples.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-bronzer",
+      "name": "Sun-Drenched Warm Glow Bronzer",
+      "category": "Makeup",
+      "subcategory": "Cheek Products",
+      "makeupType": "Cheek",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Dewy / Glowy",
+        "HD / Airbrush"
+      ],
+      "price": 22,
+      "originalPrice": 30,
+      "rating": 4.8,
+      "reviewsCount": 350,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800&auto=format&fit=crop",
+      "volume": "10g Luxury Embossed Compact",
+      "description": "Bronzer: Adds a warm, sun-tanned look. Infused with golden undertones and cocoa butter to create radiant warmth without orange cast or muddy streaks.",
+      "ingredients": [
+        "Cocoa Seed Butter",
+        "Mineral Mica",
+        "Argan Oil",
+        "Silica"
+      ],
+      "benefits": [
+        "Adds a warm, sun-tanned look",
+        "Soft-focus blurring finish",
+        "Silky non-chalky formula",
+        "Subtle natural warmth"
+      ],
+      "howToUse": "Dust lightly in the shape of a \"3\" along your hairline, hollow of cheeks, and jawline.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-highlighter",
+      "name": "Starlight Prism Liquid & Powder Highlighter",
+      "category": "Makeup",
+      "subcategory": "Cheek Products",
+      "makeupType": "Cheek",
+      "makeupStyles": [
+        "Dewy / Glowy",
+        "HD / Airbrush",
+        "Smokey Eye"
+      ],
+      "price": 21,
+      "originalPrice": 28,
+      "rating": 4.9,
+      "reviewsCount": 580,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1590156206657-e9a8f2a2491a?q=80&w=800&auto=format&fit=crop",
+      "volume": "15ml Liquid Dropper + 6g Compact",
+      "description": "Highlighter: Adds a bright, shiny glow to high points of the face. Ultra-refined light-refracting pearls give a glass-skin luminous sheen without chunky glitter.",
+      "ingredients": [
+        "Ultra-Fine Pearl Pigments",
+        "Squalane",
+        "Rosehip Oil",
+        "Vitamin C"
+      ],
+      "benefits": [
+        "Adds a bright, shiny glow to high points of the face",
+        "Dewy wet-look reflective shine",
+        "Zero chalkiness or glitter fallout",
+        "Stays vibrant for 14 hours"
+      ],
+      "howToUse": "Dab onto cheekbone peaks, bridge of nose, brow bone, and cupid’s bow. Tap with fingertips to melt in.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-contour",
+      "name": "Sculpt & Define Precision Cream Contour",
+      "category": "Makeup",
+      "subcategory": "Cheek Products",
+      "makeupType": "Cheek",
+      "makeupStyles": [
+        "Matte",
+        "HD / Airbrush",
+        "Smokey Eye"
+      ],
+      "price": 19.5,
+      "originalPrice": 27,
+      "rating": 4.7,
+      "reviewsCount": 310,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop",
+      "volume": "7.5g Dual-Ended Stick",
+      "description": "Contour: Darker shade used to shape and slim features. Cool-toned matte formula mimics natural facial shadows to carve out cheekbones and define the jaw.",
+      "ingredients": [
+        "Candelilla Wax",
+        "Jojoba Oil",
+        "Mineral Iron Oxides",
+        "Kaolin Clay"
+      ],
+      "benefits": [
+        "Darker shade used to shape and slim features",
+        "Cool-toned natural shadow effect",
+        "Effortless cream-to-powder glide",
+        "HD camera approved definition"
+      ],
+      "howToUse": "Swipe directly under cheekbones, along nose sides, and under jawline; blend upward with a contour brush.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-eyeshadow",
+      "name": "Velvet Horizon 12-Pan Eyeshadow Palette",
+      "category": "Makeup",
+      "subcategory": "Eye Products",
+      "makeupType": "Eye",
+      "makeupStyles": [
+        "Smokey Eye",
+        "Natural / No-Makeup Look",
+        "HD / Airbrush"
+      ],
+      "price": 36,
+      "originalPrice": 48,
+      "rating": 4.9,
+      "reviewsCount": 710,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1583241800698-e9ab01830a27?q=80&w=800&auto=format&fit=crop",
+      "volume": "12 Shades Palette (Mattes & Shimmers)",
+      "description": "Eyeshadow: Colored powder or cream for eyelids. 12 buttery rich warm neutral, smokey charcoal, and molten shimmer shades for versatile day-to-night looks.",
+      "ingredients": [
+        "Triple-Milled Mineral Powders",
+        "Zinc Stearate",
+        "Vitamin E",
+        "Jojoba Esters"
+      ],
+      "benefits": [
+        "Colored powder or cream for eyelids",
+        "Intense one-swipe color payoff",
+        "Zero fallout and crease-proof",
+        "Mix of velvety mattes and multidimensional shimmers"
+      ],
+      "howToUse": "Sweep base transition shades across crease, pack deep smokey tones on outer corners, and pat metallic shimmer onto lid center.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-eyeliner",
+      "name": "Precision 24H Waterproof Liquid & Gel Eyeliner",
+      "category": "Makeup",
+      "subcategory": "Eye Products",
+      "makeupType": "Eye",
+      "makeupStyles": [
+        "Smokey Eye",
+        "HD / Airbrush",
+        "Natural / No-Makeup Look"
+      ],
+      "price": 15,
+      "originalPrice": 20,
+      "rating": 4.8,
+      "reviewsCount": 890,
+      "tag": "Top Rated",
+      "image": "https://images.unsplash.com/photo-1583241801142-113b9f5bbde5?q=80&w=800&auto=format&fit=crop",
+      "volume": "0.55ml Felt Tip Pen + Gel Pencil",
+      "description": "Eyeliner: Pencil or liquid to line the eyes. 0.1mm micro-fine flexible brush tip delivers crisp jet-black lines that resist water, sweat, and smudging.",
+      "ingredients": [
+        "Carbon Black Pigment",
+        "Acrylates Copolymer",
+        "Castor Oil",
+        "Aloe Leaf Extract"
+      ],
+      "benefits": [
+        "Pencil or liquid to line the eyes",
+        "24-hour smudge-proof waterproof hold",
+        "Ultra-sharp fine wing precision",
+        "Deep midnight black intensity"
+      ],
+      "howToUse": "Trace along upper lash line starting from inner corner outward, flicking up slightly at outer edge for a sharp cat-eye wing.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-mascara",
+      "name": "Ultra-Volume 4D Panoramic Mascara",
+      "category": "Makeup",
+      "subcategory": "Eye Products",
+      "makeupType": "Eye",
+      "makeupStyles": [
+        "Smokey Eye",
+        "Natural / No-Makeup Look",
+        "HD / Airbrush",
+        "Dewy / Glowy"
+      ],
+      "price": 18,
+      "originalPrice": 24,
+      "rating": 4.9,
+      "reviewsCount": 1120,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1591360236480-4ed861025fa1?q=80&w=800&auto=format&fit=crop",
+      "volume": "12ml Hourglass Brush Wand",
+      "description": "Mascara: Dark liquid to darken and lengthen eyelashes. Innovative tubing fiber formula that coats lashes from root to tip for dramatic volume without clumping.",
+      "ingredients": [
+        "Biotinoyl Tripeptide",
+        "Panthenol (Pro-Vitamin B5)",
+        "Carnauba Wax",
+        "Carbon Mineral Black"
+      ],
+      "benefits": [
+        "Dark liquid to darken and lengthen eyelashes",
+        "300% visible lash lift and volume",
+        "Clump-free hourglass silicone brush",
+        "Easy warm-water removal"
+      ],
+      "howToUse": "Wiggle brush wand at lash roots and pull through to tips in an upward rolling motion. Layer for extra drama.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-eyebrow",
+      "name": "Dual Sculpt Micro Eyebrow Pencil & Clear Gel",
+      "category": "Makeup",
+      "subcategory": "Eye Products",
+      "makeupType": "Eye",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Matte",
+        "HD / Airbrush"
+      ],
+      "price": 14.5,
+      "originalPrice": 19,
+      "rating": 4.7,
+      "reviewsCount": 460,
+      "tag": "Sale",
+      "image": "https://images.unsplash.com/photo-1503236823255-94609f598e71?q=80&w=800&auto=format&fit=crop",
+      "volume": "0.08g Micro-Lead + 4ml Brow Gel",
+      "description": "Eyebrow Pencil / Gel: Shapes and fills in brows. 1.5mm ultra-fine pencil to mimic natural hair strokes paired with a laminated hold setting gel.",
+      "ingredients": [
+        "Plant Wax Matrix",
+        "Hydrolyzed Silk",
+        "Vitamin E",
+        "Mineral Pigments"
+      ],
+      "benefits": [
+        "Shapes and fills in brows",
+        "Mimics realistic individual brow hairs",
+        "All-day laminated brow hold",
+        "Spoolie brush included"
+      ],
+      "howToUse": "Flick fine upward strokes to fill sparse areas, then brush through with clear setting gel to lock hairs in place.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-lip-gloss",
+      "name": "Glass-Shine Hydrating Plumping Lip Gloss",
+      "category": "Makeup",
+      "subcategory": "Lip Products",
+      "makeupType": "Lip",
+      "makeupStyles": [
+        "Dewy / Glowy",
+        "Natural / No-Makeup Look"
+      ],
+      "price": 14,
+      "originalPrice": 18,
+      "rating": 4.8,
+      "reviewsCount": 840,
+      "tag": "Bestseller",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800&auto=format&fit=crop",
+      "volume": "6.5ml Gloss Tube",
+      "description": "Lip Gloss: Shiny, wet-look finish for lips. Non-sticky high-shine mirror glaze enriched with hyaluronic spheres for visibly plumper, fuller lips.",
+      "ingredients": [
+        "Hyaluronic Filling Spheres",
+        "Peppermint Essential Oil",
+        "Sweet Almond Oil",
+        "Vitamin E"
+      ],
+      "benefits": [
+        "Shiny, wet-look finish for lips",
+        "Non-sticky ultra-comfortable shine",
+        "Visibly plumps & softens dry lips",
+        "Delicious vanilla scent"
+      ],
+      "howToUse": "Swipe generously over bare lips or layer over lip liner/lipstick for high-wattage shine.",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "prod-makeup-lip-liner",
+      "name": "Stay-All-Day Precision Velvet Lip Liner",
+      "category": "Makeup",
+      "subcategory": "Lip Products",
+      "makeupType": "Lip",
+      "makeupStyles": [
+        "Matte",
+        "Smokey Eye",
+        "HD / Airbrush"
+      ],
+      "price": 12,
+      "originalPrice": 16,
+      "rating": 4.7,
+      "reviewsCount": 380,
+      "tag": "Sale",
+      "image": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop",
+      "volume": "1.2g Slim Pencil",
+      "description": "Lip Liner: Pencil to outline the lips. Creamy water-resistant pencil that defines, reshapes, and prevents lipstick from feathering or bleeding.",
+      "ingredients": [
+        "Carnauba Wax",
+        "Jojoba Oil",
+        "Mineral Pigments",
+        "Vitamin C"
+      ],
+      "benefits": [
+        "Pencil to outline the lips",
+        "Prevents feathering and bleeding",
+        "Creamy glide without tugging",
+        "Long-wear waterproof barrier"
+      ],
+      "howToUse": "Trace the outer perimeter of your lip line, slightly contouring the cupid’s bow. Fill in entire lips as a base if desired.",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "prod-makeup-lip-stain",
+      "name": "Water-Tint 24H Weightless Lip Stain",
+      "category": "Makeup",
+      "subcategory": "Lip Products",
+      "makeupType": "Lip",
+      "makeupStyles": [
+        "Natural / No-Makeup Look",
+        "Dewy / Glowy"
+      ],
+      "price": 15.5,
+      "originalPrice": 21,
+      "rating": 4.9,
+      "reviewsCount": 620,
+      "tag": "New",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop",
+      "volume": "5ml Glass Bottle",
+      "description": "Lip Stain: Long-lasting light color liquid. Water-based juice tint that sinks into lips for a weightless, transfer-proof popsicle gradient stain.",
+      "ingredients": [
+        "Pomegranate Fruit Water",
+        "Glycerin",
+        "Aloe Vera Extract",
+        "Natural Fruit Pigments"
+      ],
+      "benefits": [
+        "Long-lasting light color liquid",
+        "Transfer-proof & mask-proof color",
+        "Feather-light watery texture",
+        "Does not crack or dry lips"
+      ],
+      "howToUse": "Dab 2-3 drops on center of lips and quickly tap outwards with your fingertip for a natural blotted gradient.",
+      "inStock": true,
+      "featured": true
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq-101",
+      "name": "Ayesha Khan",
+      "email": "ayesha.k@example.com",
+      "phone": "+92 300 1234567",
+      "subject": "Skin Care Routine for Dry Sensitive Skin",
+      "serviceType": "Skincare Consultation",
+      "message": "Hello, I have very sensitive skin prone to redness. Which serum from your collection would you recommend between Peach 70 and Catalyst Anti-Pigmentation?",
+      "status": "new",
+      "priority": "normal",
+      "createdAt": "2026-08-15T08:30:00Z",
+      "adminNotes": "Customer interested in Peach 70 and gentle care products."
+    },
+    {
+      "id": "inq-102",
+      "name": "David Miller",
+      "email": "david.miller@techflow.io",
+      "phone": "+1 415 890 1234",
+      "subject": "Custom Next.js E-commerce Project",
+      "serviceType": "Website Development",
+      "message": "Hi Saqib, I loved the UI and fluid animations of Glowora! We are looking to build a multi-brand beauty storefront and would love to discuss a contract with Saqib Visuals.",
+      "status": "in_progress",
+      "priority": "high",
+      "createdAt": "2026-08-14T14:20:00Z",
+      "adminNotes": "Initial portfolio review sent. Scheduled discovery call."
+    },
+    {
+      "id": "inq-103",
+      "name": "Zainab Fatima",
+      "email": "zainab.f@gmail.com",
+      "phone": "+92 321 9876543",
+      "subject": "Bulk Order Inquiry for Salon in Lahore",
+      "serviceType": "Order Question",
+      "message": "We run a premier beauty salon and want to order 20 units of the Curated Essentials Skincare Kit and 30 bottles of Peach 70 Niacin Serum. Do you provide wholesale pricing?",
+      "status": "resolved",
+      "priority": "urgent",
+      "createdAt": "2026-08-13T10:15:00Z",
+      "adminNotes": "Wholesale catalog & 25% bulk quote shared via email.",
+      "replySent": "Wholesale quotation sent with delivery within 48 hours."
+    }
+  ],
+  "settings": {
+    "announcementText": "✨ Radiate Confidence Every Day • Free Worldwide Shipping on orders over $50 • Use Code: GLOW20",
+    "announcementActive": true,
+    "heroBadgeText": "Radiate Confidence Every Day",
+    "heroTitle": "Beauty & Wellness",
+    "heroSubtitle": "Discover premium health & beauty products formulated to nourish your skin, hair & body from the inside out.",
+    "promoDiscountPercent": 20,
+    "contactEmail": "mrsaqib242242@gmail.com",
+    "contactPhone": "+92 347 8936242",
+    "contactLocation": "Faisalabad, Pakistan",
+    "customization": {
+      "colors": {
+        "preset": "blush-rose",
+        "headingColor": "#18181b",
+        "bodyTextColor": "#3f3f46",
+        "mutedTextColor": "#71717a",
+        "primaryAccentColor": "#db2777",
+        "secondaryAccentColor": "#f472b6",
+        "canvasBgColor": "#fff5f7",
+        "cardBgColor": "#ffffff",
+        "heroBgGradientStart": "#ec4899",
+        "heroBgGradientEnd": "#e11d48",
+        "promoBanner1Bg": "#fce7f3",
+        "promoBanner2Bg": "#f43f5e",
+        "badgeBgColor": "#fdf2f8",
+        "badgeTextColor": "#db2777"
+      },
+      "images": {
+        "heroModelImage": "/images/hero_beauty_model_1786879155700.png",
+        "promoBanner1Image": "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=800&auto=format&fit=crop",
+        "promoBanner2Image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=700&auto=format&fit=crop",
+        "naturalGlowSectionImage": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=900&auto=format&fit=crop",
+        "sensitiveSkinSectionImage": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
+        "antiPigmentationImage": "https://images.unsplash.com/photo-1608248597359-005cb2346743?q=80&w=800&auto=format&fit=crop",
+        "essentialsKitImage": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop",
+        "biggestLaunchImage": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop",
+        "glowcareSecretImage": "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?q=80&w=800&auto=format&fit=crop",
+        "beforeImage": "/images/skin_before_acne_1786879205572.jpg",
+        "afterImage": "/images/skin_after_glow_1786879190967.jpg",
+        "multipleUsagesImage": "https://images.unsplash.com/photo-1608248597359-009f7a77ec81?q=80&w=800&auto=format&fit=crop",
+        "makeoverBannerImage": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=900&auto=format&fit=crop",
+        "categoryImages": {
+          "skin-care": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=600&auto=format&fit=crop",
+          "hair-care": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=600&auto=format&fit=crop",
+          "body-care": "https://images.unsplash.com/photo-1556760544-74068565f05c?q=80&w=600&auto=format&fit=crop",
+          "makeup": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600&auto=format&fit=crop",
+          "mehndi-designs": "/images/mehndi_bridal_hands_1786879695626.jpg",
+          "health-wellness": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=600&auto=format&fit=crop"
+        }
+      },
+      "sounds": {
+        "theme": "crystal",
+        "enabled": true,
+        "volume": 0.6,
+        "triggers": {
+          "click": true,
+          "addToCart": true,
+          "wishlist": true,
+          "modalToggle": true,
+          "checkoutSuccess": true,
+          "filterChange": true
+        }
+      }
+    }
+  },
+  "orders": [
+    {
+      "id": "ord-5001",
+      "customerName": "Sana Tariq",
+      "customerEmail": "sana.tariq@gmail.com",
+      "customerPhone": "+92 300 4567890",
+      "shippingAddress": "House 42, Gulberg III",
+      "city": "Lahore",
+      "items": [
+        {
+          "productId": "prod-peach-70-serum",
+          "productName": "Peach 70 Niacin Serum",
+          "price": 24.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop"
+        }
+      ],
+      "totalAmount": 49.98,
+      "status": "Shipped",
+      "paymentMethod": "Cash on Delivery",
+      "createdAt": "2026-08-15T06:10:00Z"
+    }
+  ],
+  "uploadedImages": {}
+}
