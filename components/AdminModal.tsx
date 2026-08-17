@@ -88,6 +88,7 @@ export default function AdminModal() {
     deleteProduct,
     settings,
     updateSiteSettings,
+    uploadImage,
     addToast
   } = useStore();
 
@@ -242,15 +243,25 @@ export default function AdminModal() {
 
     setIsSubmittingService(true);
     try {
+      const serviceId = newServiceForm.id.trim() || `srv-${Date.now()}`;
+      let finalImageUrl = newServiceForm.image.trim();
+
+      if (finalImageUrl.startsWith('data:image')) {
+        const uploadRes = await uploadImage(finalImageUrl, `product:${serviceId}`);
+        if (uploadRes.success && uploadRes.url) {
+          finalImageUrl = uploadRes.url;
+        }
+      }
+
       const res = await addProduct({
-        id: newServiceForm.id.trim() || `srv-${Date.now()}`,
+        id: serviceId,
         name: newServiceForm.name.trim(),
         description: newServiceForm.description.trim(),
         price: numPrice,
         originalPrice: newServiceForm.originalPrice ? parseFloat(newServiceForm.originalPrice.toString()) : undefined,
         category: newServiceForm.category,
         subcategory: newServiceForm.subcategory,
-        image: newServiceForm.image.trim(),
+        image: finalImageUrl,
         volume: newServiceForm.volume.trim() || '60 mins Session',
         tag: 'New',
         inStock: true,

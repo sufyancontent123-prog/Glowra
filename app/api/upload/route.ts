@@ -79,18 +79,20 @@ export async function POST(req: NextRequest) {
     const relativeUrl = `/uploads/${filename}`;
 
     // Record in database and remove old image file if replaced
-    serverDb.saveUploadedImage(slotKey, relativeUrl, filename);
+    const saveResult = serverDb.saveUploadedImage(slotKey, relativeUrl, filename);
 
     return NextResponse.json({
       success: true,
       data: {
         url: relativeUrl,
         filename,
-        size: fileBuffer.length
+        size: fileBuffer.length,
+        settings: saveResult.settings
       },
       url: relativeUrl,
       filename,
-      size: fileBuffer.length
+      size: fileBuffer.length,
+      settings: saveResult.settings
     });
   } catch (error: any) {
     console.error('Image upload error:', error);

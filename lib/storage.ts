@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { Product, UserInquiry, SiteSettings, Order } from './types';
 import { INITIAL_PRODUCTS, INITIAL_INQUIRIES, INITIAL_SITE_SETTINGS } from './data';
+import { DEFAULT_CUSTOMIZATION } from './customizationPresets';
 
 interface GlobalStore {
   products: Product[];
@@ -67,27 +68,79 @@ function getDefaultStore(): GlobalStore {
 function getStore(): GlobalStore {
   ensureDirectories();
 
-  // If in-memory store is active, return it
-  if (globalThis.__GLOWORA_STORE__) {
-    return globalThis.__GLOWORA_STORE__;
-  }
-
-  // Try reading from persistent JSON file
+  // Try reading from persistent JSON file on disk first
   if (fs.existsSync(DATA_FILE)) {
     try {
       const fileData = fs.readFileSync(DATA_FILE, 'utf-8');
       const parsed = JSON.parse(fileData);
       if (parsed && Array.isArray(parsed.products) && parsed.settings) {
-        globalThis.__GLOWORA_STORE__ = {
-          ...getDefaultStore(),
+        const defaultStore = getDefaultStore();
+        const mergedStore: GlobalStore = {
+          ...defaultStore,
           ...parsed,
+          settings: {
+            ...defaultStore.settings,
+            ...parsed.settings,
+            customization: {
+              ...DEFAULT_CUSTOMIZATION,
+              ...(parsed.settings?.customization || {}),
+              colors: {
+                ...DEFAULT_CUSTOMIZATION.colors,
+                ...(parsed.settings?.customization?.colors || {})
+              },
+              images: {
+                ...DEFAULT_CUSTOMIZATION.images,
+                ...(parsed.settings?.customization?.images || {}),
+                categoryImages: {
+                  ...DEFAULT_CUSTOMIZATION.images.categoryImages,
+                  ...(parsed.settings?.customization?.images?.categoryImages || {})
+                }
+              },
+              sounds: {
+                ...DEFAULT_CUSTOMIZATION.sounds,
+                ...(parsed.settings?.customization?.sounds || {}),
+                triggers: {
+                  ...DEFAULT_CUSTOMIZATION.sounds.triggers,
+                  ...(parsed.settings?.customization?.sounds?.triggers || {})
+                }
+              }
+            }
+          },
           uploadedImages: parsed.uploadedImages || {}
         };
-        return globalThis.__GLOWORA_STORE__!;
+
+        // Ensure any uploaded image record in uploadedImages is mapped to the corresponding image slot
+        if (mergedStore.uploadedImages && mergedStore.settings.customization?.images) {
+          for (const [slot, filename] of Object.entries(mergedStore.uploadedImages)) {
+            const relUrl = `/uploads/${filename}`;
+            if (slot.startsWith('category:')) {
+              const catKey = slot.replace('category:', '');
+              if (mergedStore.settings.customization.images.categoryImages) {
+                mergedStore.settings.customization.images.categoryImages[catKey] = relUrl;
+              }
+            } else if (slot.startsWith('product:')) {
+              const prodId = slot.replace('product:', '');
+              const pIdx = mergedStore.products.findIndex((p) => p.id === prodId);
+              if (pIdx !== -1) {
+                mergedStore.products[pIdx].image = relUrl;
+              }
+            } else {
+              (mergedStore.settings.customization.images as any)[slot] = relUrl;
+            }
+          }
+        }
+
+        globalThis.__GLOWORA_STORE__ = mergedStore;
+        return mergedStore;
       }
     } catch (err) {
-      console.warn('Failed to parse database file, falling back to defaults:', err);
+      console.warn('Failed to parse database file, checking in-memory or fallback:', err);
     }
+  }
+
+  // If in-memory store is active, return it
+  if (globalThis.__GLOWORA_STORE__) {
+    return globalThis.__GLOWORA_STORE__;
   }
 
   // Fallback to default and persist to file
@@ -256,19 +309,46 @@ export const serverDb = {
       ...updates,
       customization: mergedCustomization
     };
+
+    // Keep uploadedImages map in sync with current active images
+    if (mergedCustomization.images && store.uploadedImages) {
+      for (const [key, val] of Object.entries(mergedCustomization.images)) {
+        if (key === 'categoryImages' && typeof val === 'object' && val) {
+          for (const [catKey, catUrl] of Object.entries(val)) {
+            const slotKey = `category:${catKey}`;
+            if (typeof catUrl === 'string' && catUrl.startsWith('/uploads/')) {
+              store.uploadedImages[slotKey] = catUrl.replace('/uploads/', '');
+            } else if (store.uploadedImages[slotKey]) {
+              const oldFile = path.join(UPLOADS_DIR, store.uploadedImages[slotKey]);
+              try { if (fs.existsSync(oldFile)) fs.unlinkSync(oldFile); } catch (e) {}
+              delete store.uploadedImages[slotKey];
+            }
+          }
+        } else if (typeof val === 'string') {
+          if (val.startsWith('/uploads/')) {
+            store.uploadedImages[key] = val.replace('/uploads/', '');
+          } else if (store.uploadedImages[key]) {
+            const oldFile = path.join(UPLOADS_DIR, store.uploadedImages[key]);
+            try { if (fs.existsSync(oldFile)) fs.unlinkSync(oldFile); } catch (e) {}
+            delete store.uploadedImages[key];
+          }
+        }
+      }
+    }
+
     saveStore(store);
     return { ...store.settings };
   },
 
   // Image Upload File Management
-  saveUploadedImage: (slotKey: string, relativeUrl: string, diskFilename: string) => {
+  saveUploadedImage: (slotKey: string, relativeUrl: string, diskFilename: string): { settings: SiteSettings; url: string } => {
     const store = getStore();
     ensureDirectories();
     if (!store.uploadedImages) {
       store.uploadedImages = {};
     }
 
-    // If an image previously existed for this slot, delete the old file from disk
+    // If an image previously existed for this slot, delete the old file from disk if different
     const previousFilename = store.uploadedImages[slotKey];
     if (previousFilename && previousFilename !== diskFilename) {
       const oldFilePath = path.join(UPLOADS_DIR, previousFilename);
@@ -282,7 +362,33 @@ export const serverDb = {
     }
 
     store.uploadedImages[slotKey] = diskFilename;
+
+    // Directly bind the new permanent URL to the customization or product record
+    if (!store.settings.customization) {
+      store.settings.customization = { ...DEFAULT_CUSTOMIZATION };
+    }
+    if (!store.settings.customization.images) {
+      store.settings.customization.images = { ...DEFAULT_CUSTOMIZATION.images };
+    }
+
+    if (slotKey.startsWith('category:')) {
+      const catKey = slotKey.replace('category:', '');
+      if (!store.settings.customization.images.categoryImages) {
+        store.settings.customization.images.categoryImages = { ...DEFAULT_CUSTOMIZATION.images.categoryImages };
+      }
+      store.settings.customization.images.categoryImages[catKey] = relativeUrl;
+    } else if (slotKey.startsWith('product:')) {
+      const prodId = slotKey.replace('product:', '');
+      const pIdx = store.products.findIndex((p) => p.id === prodId);
+      if (pIdx !== -1) {
+        store.products[pIdx].image = relativeUrl;
+      }
+    } else {
+      (store.settings.customization.images as any)[slotKey] = relativeUrl;
+    }
+
     saveStore(store);
+    return { settings: { ...store.settings }, url: relativeUrl };
   },
 
   removeUploadedImage: (slotKey: string) => {
