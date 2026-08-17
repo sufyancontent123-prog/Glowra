@@ -1,0 +1,6 @@
+{
+  "name": "Glowora & Saqib Visuals",
+  "description": "Luxury women salon & aesthetic beauty studio platform built with Next.js, featuring interactive salon service menus, bridal makeover showcases, appointment reservations, customer consultations, and real-time salon service management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
