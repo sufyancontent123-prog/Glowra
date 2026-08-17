@@ -13,6 +13,10 @@ function ensureUploadsDir() {
   }
 }
 
+export async function GET() {
+  return NextResponse.json({ success: true, message: 'Upload service active' });
+}
+
 export async function POST(req: NextRequest) {
   try {
     ensureUploadsDir();
@@ -79,6 +83,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
+      data: {
+        url: relativeUrl,
+        filename,
+        size: fileBuffer.length
+      },
       url: relativeUrl,
       filename,
       size: fileBuffer.length

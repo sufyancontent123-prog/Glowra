@@ -842,8 +842,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
           });
         }
         const result = await safeParseResponse<{ url: string; filename: string }>(res);
-        if (result.success && result.data?.url) {
-          return { success: true, url: result.data.url };
+        const resolvedUrl = (result as any).url || result.data?.url;
+        if (result.success && resolvedUrl) {
+          return { success: true, url: resolvedUrl };
         }
         return { success: false, error: result.error || 'Failed to upload image to server' };
       } catch (err: any) {
