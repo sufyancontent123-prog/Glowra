@@ -11,7 +11,6 @@ export default function Navbar() {
     setIsCartOpen,
     wishlist,
     setIsWishlistOpen,
-    setIsPortfolioModalOpen,
     setIsContactModalOpen,
     setIsAdminModalOpen,
     searchQuery,
@@ -286,15 +285,6 @@ export default function Navbar() {
               className="text-left font-semibold text-zinc-800 py-2 border-b border-zinc-50"
             >
               Home
-            </button>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                setIsPortfolioModalOpen(true);
-              }}
-              className="text-left font-semibold text-zinc-800 py-2 border-b border-zinc-50"
-            >
-              About Muhammad Saqib
             </button>
             <button
               onClick={() => scrollToSection('best-sellers-section')}

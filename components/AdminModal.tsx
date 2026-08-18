@@ -4,15 +4,12 @@ import React, { useState, useRef } from 'react';
 import { useStore } from '@/context/StoreContext';
 import { Product, UserInquiry } from '@/lib/types';
 import { motion, AnimatePresence } from 'motion/react';
-import AdminCustomizerTab from './AdminCustomizerTab';
 import {
   X,
   LayoutDashboard,
   MessageSquare,
   Sparkles,
-  Palette,
   ShoppingBag,
-  Settings,
   Trash2,
   CheckCircle2,
   Clock,
@@ -92,7 +89,7 @@ export default function AdminModal() {
     addToast
   } = useStore();
 
-  const [activeTab, setActiveTab] = useState<'services' | 'inquiries' | 'orders' | 'customization' | 'settings'>('services');
+  const [activeTab, setActiveTab] = useState<'services' | 'inquiries' | 'orders'>('services');
   
   // Inquiries State
   const [inquirySearch, setInquirySearch] = useState('');
@@ -139,19 +136,6 @@ export default function AdminModal() {
   const [isDirectDeleteOpen, setIsDirectDeleteOpen] = useState(false);
   const [directNameLookup, setDirectNameLookup] = useState('');
 
-  // Site Settings State
-  const [siteForm, setSiteForm] = useState({
-    announcementText: settings.announcementText,
-    announcementActive: settings.announcementActive,
-    heroBadgeText: settings.heroBadgeText,
-    heroTitle: settings.heroTitle,
-    heroSubtitle: settings.heroSubtitle,
-    promoDiscountPercent: settings.promoDiscountPercent,
-    contactEmail: settings.contactEmail,
-    contactPhone: settings.contactPhone,
-    contactLocation: settings.contactLocation
-  });
-
   if (!isAdminModalOpen) return null;
 
   // Filter inquiries
@@ -176,11 +160,6 @@ export default function AdminModal() {
     const matchesCat = serviceCategoryFilter === 'All' || p.category.toLowerCase() === serviceCategoryFilter.toLowerCase();
     return matchesSearch && matchesCat;
   });
-
-  const handleSaveSettings = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await updateSiteSettings(siteForm);
-  };
 
   const handleSendReply = async () => {
     if (!selectedInquiry) return;
@@ -439,43 +418,6 @@ export default function AdminModal() {
                   </span>
                 )}
                 {activeTab === 'inquiries' && (
-                  <motion.div
-                    layoutId="adminTabLine"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-pink-600"
-                  />
-                )}
-              </button>
-
-              <button
-                id="admin-tab-customizer"
-                onClick={() => setActiveTab('customization')}
-                className={`py-3.5 flex items-center gap-2 relative transition-colors whitespace-nowrap font-medium ${
-                  activeTab === 'customization' ? 'text-pink-600 font-bold' : 'text-zinc-500 hover:text-zinc-800'
-                }`}
-              >
-                <Palette className="w-4 h-4 text-pink-500" />
-                <span>Website Customizer</span>
-                <span className="text-[10px] bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold px-1.5 py-0.2 rounded-md uppercase tracking-wider">
-                  New
-                </span>
-                {activeTab === 'customization' && (
-                  <motion.div
-                    layoutId="adminTabLine"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-pink-600"
-                  />
-                )}
-              </button>
-
-              <button
-                id="admin-tab-settings"
-                onClick={() => setActiveTab('settings')}
-                className={`py-3.5 flex items-center gap-2 relative transition-colors whitespace-nowrap ${
-                  activeTab === 'settings' ? 'text-pink-600' : 'text-zinc-500 hover:text-zinc-800'
-                }`}
-              >
-                <Settings className="w-4 h-4" />
-                <span>Salon Configuration</span>
-                {activeTab === 'settings' && (
                   <motion.div
                     layoutId="adminTabLine"
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-pink-600"
@@ -978,115 +920,6 @@ export default function AdminModal() {
                     </div>
                   )}
                 </div>
-              )}
-
-              {/* ======================================================== */}
-              {/* WEBSITE CUSTOMIZER SECTION                               */}
-              {/* ======================================================== */}
-              {activeTab === 'customization' && (
-                <AdminCustomizerTab />
-              )}
-
-              {/* ======================================================== */}
-              {/* SETTINGS SECTION                                         */}
-              {/* ======================================================== */}
-              {activeTab === 'settings' && (
-                <form onSubmit={handleSaveSettings} className="bg-white p-6 sm:p-8 rounded-3xl border border-pink-100 shadow-xs max-w-3xl mx-auto space-y-6">
-                  <div>
-                    <h4 className="font-serif font-bold text-zinc-900 text-lg mb-1">
-                      Salon Profile & Announcement Settings
-                    </h4>
-                    <p className="text-xs text-zinc-500">
-                      Customize top banner alerts, hero headline text, promotional discounts, and salon contact information.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-semibold text-zinc-700 mb-1">Top Announcement Banner Text</label>
-                      <input
-                        type="text"
-                        value={siteForm.announcementText}
-                        onChange={(e) => setSiteForm({ ...siteForm, announcementText: e.target.value })}
-                        className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-semibold text-zinc-700 mb-1">Hero Badge Text</label>
-                        <input
-                          type="text"
-                          value={siteForm.heroBadgeText}
-                          onChange={(e) => setSiteForm({ ...siteForm, heroBadgeText: e.target.value })}
-                          className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold text-zinc-700 mb-1">Hero Main Title</label>
-                        <input
-                          type="text"
-                          value={siteForm.heroTitle}
-                          onChange={(e) => setSiteForm({ ...siteForm, heroTitle: e.target.value })}
-                          className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-zinc-700 mb-1">Hero Subtitle</label>
-                      <textarea
-                        rows={2}
-                        value={siteForm.heroSubtitle}
-                        onChange={(e) => setSiteForm({ ...siteForm, heroSubtitle: e.target.value })}
-                        className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                      <div>
-                        <label className="block text-xs font-semibold text-zinc-700 mb-1">Salon Contact Email</label>
-                        <input
-                          type="email"
-                          value={siteForm.contactEmail}
-                          onChange={(e) => setSiteForm({ ...siteForm, contactEmail: e.target.value })}
-                          className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold text-zinc-700 mb-1">Salon Phone Number</label>
-                        <input
-                          type="text"
-                          value={siteForm.contactPhone}
-                          onChange={(e) => setSiteForm({ ...siteForm, contactPhone: e.target.value })}
-                          className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold text-zinc-700 mb-1">Salon Location</label>
-                        <input
-                          type="text"
-                          value={siteForm.contactLocation}
-                          onChange={(e) => setSiteForm({ ...siteForm, contactLocation: e.target.value })}
-                          className="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3.5 py-2 text-xs focus:ring-1 focus:ring-pink-500 focus:outline-none"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-pink-100 flex justify-end">
-                    <button
-                      type="submit"
-                      className="px-6 py-2.5 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-md transition-colors"
-                    >
-                      <Save className="w-4 h-4" />
-                      <span>Save Salon Configuration</span>
-                    </button>
-                  </div>
-                </form>
               )}
             </div>
 
