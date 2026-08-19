@@ -100,7 +100,7 @@ export interface FAQItem {
   id: string;
   question: string;
   answer: string;
-  category: 'General' | 'Saqib Visuals' | 'Skincare & Orders' | 'Development Services';
+  category: 'General' | 'Muhammad Sufiyan' | 'Skincare & Orders' | 'Development Services';
 }
 
 export interface CategoryInfo {

@@ -35,7 +35,7 @@ type MakeoverFilter =
   | 'Festive & Special Events';
 
 export default function MakeoverSection() {
-  const { addToCart, setIsContactModalOpen, addToast } = useStore();
+  const { addToCart, setIsContactModalOpen, openWhatsAppBooking, addToast } = useStore();
 
   const [activeFilter, setActiveFilter] = useState<MakeoverFilter>('Popular');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -733,17 +733,32 @@ export default function MakeoverSection() {
                       <span>Tested for all skin tones & sensitivities</span>
                     </div>
 
-                    <div className="flex items-center gap-3 w-full sm:w-auto">
+                    <div className="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
+                      <button
+                        id="btn-whatsapp-makeover"
+                        onClick={() => {
+                          const currentMakeover = selectedMakeover;
+                          setSelectedMakeover(null);
+                          openWhatsAppBooking(null, `${currentMakeover?.name || 'Makeover'} Transformation`, 85);
+                        }}
+                        className="flex-1 sm:flex-initial px-5 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider shadow-lg shadow-emerald-700/20 transition-all flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                        </svg>
+                        <span>Book on WhatsApp</span>
+                      </button>
+
                       <button
                         id="btn-book-consultation"
                         onClick={() => {
                           setSelectedMakeover(null);
                           setIsContactModalOpen(true);
                         }}
-                        className="flex-1 sm:flex-initial px-6 py-3 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 text-white text-xs font-bold uppercase tracking-wider shadow-lg shadow-pink-600/25 hover:from-pink-700 hover:to-rose-700 transition-all flex items-center justify-center gap-2"
+                        className="flex-1 sm:flex-initial px-5 py-3 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 text-white text-xs font-bold uppercase tracking-wider shadow-lg shadow-pink-600/25 hover:from-pink-700 hover:to-rose-700 transition-all flex items-center justify-center gap-2"
                       >
                         <Calendar className="w-4 h-4" />
-                        <span>Book Makeover Consultation</span>
+                        <span>Book In-Salon Consultation</span>
                       </button>
                     </div>
                   </div>

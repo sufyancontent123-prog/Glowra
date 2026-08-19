@@ -33,13 +33,13 @@ export default function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-zinc-500 text-sm mt-2">
-            Everything you need to know about Glowora skincare and Saqib Visuals digital services
+            Everything you need to know about Glowora skincare and Muhammad Sufiyan digital services
           </p>
         </div>
 
         {/* Category Pill Filters */}
         <div className="flex items-center justify-center gap-2 mb-8 flex-wrap">
-          {['All', 'Saqib Visuals', 'Skincare & Orders', 'Development Services'].map((cat) => (
+          {['All', 'Muhammad Sufiyan', 'Skincare & Orders', 'Development Services'].map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}

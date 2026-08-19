@@ -6,7 +6,7 @@ import { Sparkles, ArrowRight, LayoutGrid, Leaf } from 'lucide-react';
 import { useStore } from '@/context/StoreContext';
 
 export default function HeroSection() {
-  const { settings, customization } = useStore();
+  const { settings, customization, openWhatsAppBooking } = useStore();
 
   const heroImage = customization?.images?.heroModelImage || "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=900&auto=format&fit=crop";
   const gradStart = customization?.colors?.heroBgGradientStart || "#ec4899";
@@ -68,16 +68,29 @@ export default function HeroSection() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 id="hero-shop-now-btn"
                 onClick={scrollToShop}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold text-sm shadow-xl shadow-pink-900/20 border border-white/20 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold text-sm shadow-xl shadow-pink-900/20 border border-white/20 transition-all duration-200"
               >
-                <span>Shop Now</span>
+                <span>Browse Services</span>
                 <ArrowRight className="w-4 h-4" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                id="hero-whatsapp-booking-btn"
+                onClick={() => openWhatsAppBooking(null, 'Luxury Salon Makeover & Consultation')}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-950/30 border border-emerald-300/40 transition-all duration-200"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                </svg>
+                <span>Book on WhatsApp</span>
               </motion.button>
 
               <motion.button
@@ -85,9 +98,9 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.98 }}
                 id="hero-explore-categories-btn"
                 onClick={scrollToCategories}
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-pink-700 hover:bg-pink-50 font-semibold text-sm shadow-lg shadow-black/5 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-pink-700 hover:bg-pink-50 font-semibold text-sm shadow-lg shadow-black/5 transition-all duration-200"
               >
-                <span>Explore Categories</span>
+                <span>Categories</span>
                 <LayoutGrid className="w-4 h-4 text-pink-500" />
               </motion.button>
             </div>

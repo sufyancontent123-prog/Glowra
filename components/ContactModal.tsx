@@ -11,7 +11,8 @@ export default function ContactModal() {
     isContactModalOpen,
     setIsContactModalOpen,
     contactPrefill,
-    submitInquiry
+    submitInquiry,
+    openWhatsAppBooking
   } = useStore();
 
   const [formData, setFormData] = useState({
@@ -105,7 +106,7 @@ export default function ContactModal() {
                 Get In Touch
               </h3>
               <p className="text-pink-100 text-xs sm:text-sm leading-relaxed mb-6">
-                Have skincare questions, want a custom routine consultation, or looking to build a high-performance web platform with Muhammad Saqib?
+                Have skincare questions, want a custom routine consultation, or looking to build an intelligent Agentic AI system or modern web platform with Muhammad Sufiyan?
               </p>
 
               <div className="space-y-4 text-xs text-pink-100">
@@ -114,8 +115,8 @@ export default function ContactModal() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="text-[10px] text-pink-200">WhatsApp / Call</p>
-                    <p className="font-semibold text-white">+92 347 8936242</p>
+                    <p className="text-[10px] text-pink-200">WhatsApp / Direct</p>
+                    <p className="font-semibold text-white">+1 (555) 019-2834</p>
                   </div>
                 </div>
 
@@ -125,7 +126,7 @@ export default function ContactModal() {
                   </div>
                   <div>
                     <p className="text-[10px] text-pink-200">Direct Email</p>
-                    <p className="font-semibold text-white">mrsaqib242242@gmail.com</p>
+                    <p className="font-semibold text-white">smartdev242@gmail.com</p>
                   </div>
                 </div>
 
@@ -135,8 +136,24 @@ export default function ContactModal() {
                   </div>
                   <div>
                     <p className="text-[10px] text-pink-200">Base Location</p>
-                    <p className="font-semibold text-white">Faisalabad, Pakistan</p>
+                    <p className="font-semibold text-white">Global / Remote</p>
                   </div>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleClose();
+                      openWhatsAppBooking(null, formData.subject || 'Salon & Skincare Inquiry');
+                    }}
+                    className="w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer"
+                  >
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                    </svg>
+                    <span>Instant WhatsApp Chat &amp; Booking</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -157,7 +174,7 @@ export default function ContactModal() {
                   Message Sent!
                 </h4>
                 <p className="text-xs sm:text-sm text-zinc-600 max-w-sm mb-6 leading-relaxed">
-                  Thank you for reaching out. Your message has been safely saved. Muhammad Saqib will reply directly to your email or WhatsApp.
+                  Thank you for reaching out. Your message has been safely saved. Muhammad Sufiyan will reply directly to your email or WhatsApp.
                 </p>
                 <button
                   onClick={handleClose}

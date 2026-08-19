@@ -64,6 +64,12 @@ interface StoreContextType {
   isCheckoutModalOpen: boolean;
   setIsCheckoutModalOpen: (open: boolean) => void;
 
+  // WhatsApp Booking Modal
+  isWhatsAppBookingOpen: boolean;
+  setIsWhatsAppBookingOpen: (open: boolean) => void;
+  whatsAppBookingService: Product | null;
+  openWhatsAppBooking: (service?: Product | null, serviceName?: string, servicePrice?: number) => void;
+
   // Inquiries (for real-time Admin + Client)
   inquiries: UserInquiry[];
   submitInquiry: (inquiryData: {
@@ -147,6 +153,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [isPortfolioModalOpen, setIsPortfolioModalOpenState] = useState(false);
   const [isAdminModalOpen, setIsAdminModalOpenState] = useState(false);
   const [isCheckoutModalOpen, setIsCheckoutModalOpenState] = useState(false);
+  const [isWhatsAppBookingOpen, setIsWhatsAppBookingOpenState] = useState(false);
+  const [whatsAppBookingService, setWhatsAppBookingService] = useState<Product | null>(null);
 
   // Inquiries & Settings & Orders
   const [inquiries, setInquiries] = useState<UserInquiry[]>(INITIAL_INQUIRIES);
@@ -200,6 +208,35 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const setIsCheckoutModalOpen = useCallback((open: boolean) => {
     if (open) playAudio('modalToggle');
     setIsCheckoutModalOpenState(open);
+  }, [playAudio]);
+
+  const setIsWhatsAppBookingOpen = useCallback((open: boolean) => {
+    if (open) playAudio('modalToggle');
+    setIsWhatsAppBookingOpenState(open);
+    if (!open) {
+      setWhatsAppBookingService(null);
+    }
+  }, [playAudio]);
+
+  const openWhatsAppBooking = useCallback((service?: Product | null, serviceName?: string, servicePrice?: number) => {
+    playAudio('modalToggle');
+    if (service) {
+      setWhatsAppBookingService(service);
+    } else if (serviceName) {
+      setWhatsAppBookingService({
+        id: 'custom-booking',
+        name: serviceName,
+        price: servicePrice || 65,
+        rating: 5,
+        reviewsCount: 1,
+        category: 'Services',
+        image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop',
+        description: `Appointment booking for ${serviceName}`
+      } as Product);
+    } else {
+      setWhatsAppBookingService(null);
+    }
+    setIsWhatsAppBookingOpenState(true);
   }, [playAudio]);
 
   const setQuickViewProduct = useCallback((product: Product | null) => {
@@ -949,6 +986,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         setIsAdminModalOpen,
         isCheckoutModalOpen,
         setIsCheckoutModalOpen,
+        isWhatsAppBookingOpen,
+        setIsWhatsAppBookingOpen,
+        whatsAppBookingService,
+        openWhatsAppBooking,
         inquiries,
         submitInquiry,
         updateInquiryStatus,

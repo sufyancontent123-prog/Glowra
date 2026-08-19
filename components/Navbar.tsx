@@ -13,6 +13,7 @@ export default function Navbar() {
     setIsWishlistOpen,
     setIsContactModalOpen,
     setIsAdminModalOpen,
+    openWhatsAppBooking,
     searchQuery,
     setSearchQuery,
     settings,
@@ -99,6 +100,14 @@ export default function Navbar() {
                 className="text-sm font-semibold uppercase tracking-wider text-zinc-700 hover:text-pink-600 transition-colors"
               >
                 CONTACT
+              </button>
+              <button
+                id="nav-link-whatsapp"
+                onClick={() => openWhatsAppBooking(null, 'Luxury Salon Makeover & Consultation')}
+                className="text-sm font-bold uppercase tracking-wider text-emerald-600 hover:text-emerald-700 transition-colors flex items-center gap-1.5"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>WHATSAPP BOOKING</span>
               </button>
               <button
                 id="nav-link-faqs"
@@ -239,6 +248,19 @@ export default function Navbar() {
               <Box className="w-5 h-5" />
             </button>
 
+            {/* WhatsApp Booking Quick Button */}
+            <button
+              id="header-whatsapp-btn"
+              onClick={() => openWhatsAppBooking(null, 'Salon Appointment / Consultation')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-full transition-colors shadow-xs"
+              title="Book or Chat on WhatsApp"
+            >
+              <svg className="w-4 h-4 fill-emerald-600" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+              </svg>
+              <span className="hidden sm:inline">WhatsApp</span>
+            </button>
+
             {/* Admin Panel Quick Access */}
             <button
               id="header-admin-portal-btn"
@@ -312,6 +334,23 @@ export default function Navbar() {
               className="text-left font-semibold text-pink-600 py-2 border-b border-zinc-50"
             >
               Contact Us / Inquire
+            </button>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openWhatsAppBooking(null, 'Salon Appointment / Consultation');
+              }}
+              className="text-left font-bold text-emerald-700 bg-emerald-50/80 px-3 py-2.5 rounded-xl border border-emerald-200 flex items-center justify-between"
+            >
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4 fill-emerald-600" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                </svg>
+                <span>Book / Chat on WhatsApp</span>
+              </span>
+              <span className="text-[10px] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-full">
+                Instant
+              </span>
             </button>
             <button
               onClick={() => {

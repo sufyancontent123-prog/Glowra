@@ -64,18 +64,40 @@ export default function PortfolioModal() {
                     <Mail className="w-3.5 h-3.5" /> {SAQIB_PORTFOLIO_DATA.email}
                   </span>
                 </div>
+                <div className="mt-2.5">
+                  <a
+                    href="https://muhammad-sufyan-farzand-portfolio.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-full text-xs font-semibold text-white transition-colors"
+                  >
+                    <span>Muhammad-Sufyan-Farzand-Portfolio-Vercel-App</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
 
-              <button
-                onClick={() => {
-                  setIsPortfolioModalOpen(false);
-                  openContactWithPrefill('Hire Saqib for Custom Website / App Project', 'Website Development');
-                }}
-                className="px-6 py-2.5 rounded-full bg-white text-pink-700 hover:bg-pink-50 font-bold text-xs uppercase tracking-wider shadow-lg transition-transform active:scale-95 flex items-center gap-1.5 shrink-0"
-              >
-                <Send className="w-3.5 h-3.5" />
-                <span>Hire / Collaborate</span>
-              </button>
+              <div className="flex flex-col sm:flex-row items-center gap-2">
+                <a
+                  href="https://muhammad-sufyan-farzand-portfolio.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-full bg-white text-pink-700 hover:bg-pink-50 font-bold text-xs uppercase tracking-wider shadow-lg transition-transform active:scale-95 flex items-center gap-1.5 shrink-0"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>Visit Portfolio</span>
+                </a>
+                <button
+                  onClick={() => {
+                    setIsPortfolioModalOpen(false);
+                    openContactWithPrefill('Hire Muhammad Sufiyan for Agentic AI / Web Project', 'AI Solution');
+                  }}
+                  className="px-5 py-2.5 rounded-full bg-pink-900/40 hover:bg-pink-900/60 border border-white/30 text-white font-bold text-xs uppercase tracking-wider transition-transform active:scale-95 flex items-center gap-1.5 shrink-0"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>Contact</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -164,13 +186,22 @@ export default function PortfolioModal() {
                   Ready to build something extraordinary?
                 </h4>
                 <p className="text-xs text-zinc-600 mt-1">
-                  Connect with Muhammad Saqib for web development, custom AI solutions, or full-stack architectural design.
+                  Connect with Muhammad Sufiyan for Agentic AI architectures, RAG implementations, or full-stack web applications.
                 </p>
               </div>
 
               <div className="flex items-center gap-2 shrink-0">
                 <a
-                  href={`https://wa.me/923478936242?text=${encodeURIComponent('Hi Muhammad Saqib, I visited Glowora and would like to discuss a project with Saqib Visuals.')}`}
+                  href="https://muhammad-sufyan-farzand-portfolio.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-2 bg-pink-700 hover:bg-pink-800 text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1"
+                >
+                  <span>Website</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href={`https://wa.me/15550192834?text=${encodeURIComponent('Hi Muhammad Sufiyan, I would like to discuss an Agentic AI / Web Development project.')}`}
                   target="_blank"
                   rel="noreferrer"
                   className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors"
@@ -180,7 +211,7 @@ export default function PortfolioModal() {
                 <button
                   onClick={() => {
                     setIsPortfolioModalOpen(false);
-                    openContactWithPrefill('Inquiry for Saqib Visuals', 'Website Development');
+                    openContactWithPrefill('Inquiry for Muhammad Sufiyan', 'AI Solution');
                   }}
                   className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors"
                 >

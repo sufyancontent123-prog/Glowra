@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useStore } from '@/context/StoreContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle2, ShieldCheck, Truck, CreditCard, Banknote, Sparkles } from 'lucide-react';
+import { getCartOrderWhatsAppLink, DEFAULT_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export default function CheckoutModal() {
   const {
@@ -112,12 +113,35 @@ export default function CheckoutModal() {
                 <p><strong>Payment Method:</strong> {formData.paymentMethod}</p>
                 <p><strong>Estimated Delivery:</strong> 2-3 Business Days</p>
               </div>
-              <button
-                onClick={handleClose}
-                className="px-8 py-3 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-colors"
-              >
-                Back to Glowora Store
-              </button>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                <button
+                  onClick={() => {
+                    const link = getCartOrderWhatsAppLink({
+                      items: cart.map((i) => ({ name: i.product.name, quantity: i.quantity, price: i.product.price })),
+                      totalAmount: grandTotal,
+                      customerName: formData.customerName,
+                      customerPhone: formData.customerPhone,
+                      address: formData.shippingAddress,
+                      city: formData.city
+                    });
+                    window.open(link, '_blank');
+                  }}
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                  </svg>
+                  <span>Chat &amp; Track on WhatsApp</span>
+                </button>
+
+                <button
+                  onClick={handleClose}
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-colors cursor-pointer"
+                >
+                  Back to Store
+                </button>
+              </div>
             </div>
           ) : (
             <div>

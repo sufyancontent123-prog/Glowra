@@ -78,7 +78,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 1906,
     tag: 'New',
-    image: 'https://images.unsplash.com/photo-1556228722-d0b5d03a5be6?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop',
     volume: '50 Mins Session',
     description: 'Gentle dermatological exfoliation service that removes dead cellular buildup without stripping essential moisture. Leaves the skin velvety soft and deeply purified.',
     ingredients: ['Enzymatic Bamboo Micro-Polish', 'Pro-Vitamin B5', 'Organic Chamomile Extract', 'Hydrating Glycerin Infusion'],
@@ -98,7 +98,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 2800,
     tag: 'Top Rated',
-    image: 'https://images.unsplash.com/photo-1608248597249-c976906e6188?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
     volume: '60 Mins Session',
     description: 'Clinical in-salon deep barrier restoration for dry, stressed, or irritated skin. Delivers 48-hour continuous cellular hydration and strengthens delicate lipid layers.',
     ingredients: ['Bio-Identical Ceramide NP', 'Multi-Weight Hyaluronic Acid', 'Colloidal Oatmeal Mask', 'Shea Butter Emulsion'],
@@ -198,7 +198,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 1845,
     tag: 'Sale',
-    image: 'https://images.unsplash.com/photo-1567928815104-b63795123d57?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop',
     volume: '50 Mins Session',
     description: 'Intensive quenching facial delivering multi-weight hyaluronic acid deep into the dermis to plump fine dehydration lines and lock in 72-hour moisture.',
     ingredients: ['Centella Asiatica Soothing Gel', 'Plant-derived Squalane', 'Multi-Molecular Hyaluronic Acid', 'Thermal Hydrating Wrap'],
@@ -276,7 +276,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 184,
     tag: 'Bestseller',
-    image: 'https://images.unsplash.com/photo-1608248597359-561330366a5a?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop',
     volume: '55 Mins Session',
     description: 'Clinical in-salon treatment regulating excess oil, clearing congested sebum, tightening dilated pores, and reducing active blemishes.',
     ingredients: ['10% Niacinamide Clinical Serum', '1% Zinc PCA', 'High-Frequency Antibacterial Wand', 'Tea Tree Hydro-Jelly Mask'],
@@ -371,7 +371,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 420,
     tag: 'Bestseller',
-    image: 'https://images.unsplash.com/photo-1512290900672-1f41634b8c6f?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop',
     volume: '45 Mins Session',
     description: 'Holistic facial therapy utilizing authentic rose quartz crystals and gua sha stones to stimulate lymphatic drainage, relieve facial tension, and sculpt cheekbone contours.',
     ingredients: ['100% Brazilian Rose Quartz Crystals', 'Botanical Facial Oil Elixir', 'Acupressure Point Stimulation', 'Chilled Crystal Roller'],
@@ -572,7 +572,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 780,
     tag: 'Top Rated',
-    image: 'https://images.unsplash.com/photo-1631730486784-545631bc2a0b?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?q=80&w=800&auto=format&fit=crop',
     volume: '35ml Pump Glass Bottle',
     description: 'Foundation: Liquid or cream skin-tone base. Provides buildable medium-to-full coverage with a seamless skin-like luminous finish that never cakes.',
     ingredients: ['Plant Squalane', 'Vitamin E', 'Micro-Mineral Pigments', 'Rosehip Seed Oil'],
@@ -593,7 +593,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 640,
     tag: 'Bestseller',
-    image: 'https://images.unsplash.com/photo-1599733589046-10c005738ef0?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?q=80&w=800&auto=format&fit=crop',
     volume: '10ml Precision Wand',
     description: 'Concealer: Thick cream to hide spots or dark circles. High-coverage creamy formula enriched with caffeine and peptides to instantly erase blemishes.',
     ingredients: ['Caffeine Extract', 'Peptide Complex', 'Shea Butter', 'Centella Asiatica'],
@@ -700,7 +700,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 580,
     tag: 'Bestseller',
-    image: 'https://images.unsplash.com/photo-1590156206657-e9a8f2a2491a?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop',
     volume: '15ml Liquid Dropper + 6g Compact',
     description: 'Highlighter: Adds a bright, shiny glow to high points of the face. Ultra-refined light-refracting pearls give a glass-skin luminous sheen without chunky glitter.',
     ingredients: ['Ultra-Fine Pearl Pigments', 'Squalane', 'Rosehip Oil', 'Vitamin C'],
@@ -744,7 +744,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 710,
     tag: 'Bestseller',
-    image: 'https://images.unsplash.com/photo-1583241800698-e9ab01830a27?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop',
     volume: '12 Shades Palette (Mattes & Shimmers)',
     description: 'Eyeshadow: Colored powder or cream for eyelids. 12 buttery rich warm neutral, smokey charcoal, and molten shimmer shades for versatile day-to-night looks.',
     ingredients: ['Triple-Milled Mineral Powders', 'Zinc Stearate', 'Vitamin E', 'Jojoba Esters'],
@@ -938,21 +938,21 @@ export const POPULAR_MAKEUP_STYLES: MakeupStyleInfo[] = [
 export const INITIAL_FAQS: FAQItem[] = [
   {
     id: 'faq-1',
-    category: 'Saqib Visuals',
-    question: 'What is Saqib Visuals?',
-    answer: 'Saqib Visuals is the creative brand of Muhammad Saqib, specializing in Full-Stack Web Development, AI-powered solutions, UI/UX architecture, and digital content creation.'
+    category: 'Muhammad Sufiyan',
+    question: 'Who is Muhammad Sufiyan?',
+    answer: 'Muhammad Sufiyan is an Agentic AI, RAG (Retrieval-Augmented Generation) specialist, and Full-Stack Web Developer building intelligent AI workflows and high-converting modern digital web applications.'
   },
   {
     id: 'faq-2',
-    category: 'Saqib Visuals',
-    question: 'What services do you offer?',
-    answer: 'I offer a wide range of services including modern web development (Next.js, React, Tailwind CSS), mobile app development, UI/UX design, custom AI integration, database architecture, graphic design, and video editing.'
+    category: 'Muhammad Sufiyan',
+    question: 'What technical development services do you offer?',
+    answer: 'I specialize in Agentic AI systems, enterprise RAG architectures, custom LLM tool integrations, high-performance web development (Next.js 15, React 19, TypeScript, Tailwind CSS), database modeling, and sleek UI/UX interfaces.'
   },
   {
     id: 'faq-3',
-    category: 'Saqib Visuals',
-    question: 'Where are you based?',
-    answer: 'I am based in Faisalabad, Pakistan, but I work with clients globally to deliver premium digital solutions, customized software, and high-converting e-commerce web experiences.'
+    category: 'Muhammad Sufiyan',
+    question: 'Where are you based and do you work remotely?',
+    answer: 'I work with clients globally to deliver modern AI solutions, intelligent agent pipelines, and high-performance digital platforms.'
   },
   {
     id: 'faq-4',
@@ -969,8 +969,8 @@ export const INITIAL_FAQS: FAQItem[] = [
   {
     id: 'faq-6',
     category: 'Development Services',
-    question: 'Can Muhammad Saqib build custom e-commerce and web apps for my business?',
-    answer: 'Absolutely! Whether you need a high-speed e-commerce storefront like Glowora, a SaaS platform, a mobile application, or custom AI workflows, reach out directly through our contact form or WhatsApp (+92 347 8936242).'
+    question: 'Can Muhammad Sufiyan build custom Agentic AI and web apps for my business?',
+    answer: 'Absolutely! Whether you need an intelligent Agentic AI / RAG system, a high-speed e-commerce platform like Glowora, or custom web software, reach out directly through our contact form, portfolio, or WhatsApp (+1 555-019-2834).'
   }
 ];
 
@@ -979,10 +979,10 @@ export const INITIAL_INQUIRIES: UserInquiry[] = [
     id: 'inq-101',
     name: 'Ayesha Khan',
     email: 'ayesha.k@example.com',
-    phone: '+92 300 1234567',
+    phone: '+1 (555) 012-3456',
     subject: 'Skin Care Routine for Dry Sensitive Skin',
     serviceType: 'Skincare Consultation',
-    message: 'Hello, I have very sensitive skin prone to redness. Which serum from your collection would you recommend between Peach 70 and Catalyst Anti-Pigmentation?',
+    message: 'Hello, I have very sensitive skin prone to redness. Which serum from your collection would you recommend for daily hydration?',
     status: 'new',
     priority: 'normal',
     createdAt: '2026-08-15T08:30:00Z',
@@ -992,10 +992,10 @@ export const INITIAL_INQUIRIES: UserInquiry[] = [
     id: 'inq-102',
     name: 'David Miller',
     email: 'david.miller@techflow.io',
-    phone: '+1 415 890 1234',
-    subject: 'Custom Next.js E-commerce Project',
+    phone: '+1 (555) 415-8901',
+    subject: 'Custom Agentic AI & Next.js E-commerce Project',
     serviceType: 'Website Development',
-    message: 'Hi Saqib, I loved the UI and fluid animations of Glowora! We are looking to build a multi-brand beauty storefront and would love to discuss a contract with Saqib Visuals.',
+    message: 'Hi Muhammad Sufiyan, I loved the UI, fluid animations, and AI-driven architecture of your projects! We are looking to build a high-performance web platform and would love to collaborate.',
     status: 'in_progress',
     priority: 'high',
     createdAt: '2026-08-14T14:20:00Z',
@@ -1005,8 +1005,8 @@ export const INITIAL_INQUIRIES: UserInquiry[] = [
     id: 'inq-103',
     name: 'Zainab Fatima',
     email: 'zainab.f@gmail.com',
-    phone: '+92 321 9876543',
-    subject: 'Bulk Order Inquiry for Salon in Lahore',
+    phone: '+1 (555) 321-9876',
+    subject: 'Bulk Order Inquiry for Salon',
     serviceType: 'Order Question',
     message: 'We run a premier beauty salon and want to order 20 units of the Curated Essentials Skincare Kit and 30 bottles of Peach 70 Niacin Serum. Do you provide wholesale pricing?',
     status: 'resolved',
@@ -1024,50 +1024,52 @@ export const INITIAL_SITE_SETTINGS: SiteSettings = {
   heroTitle: 'Beauty & Wellness',
   heroSubtitle: 'Discover premium health & beauty products formulated to nourish your skin, hair & body from the inside out.',
   promoDiscountPercent: 20,
-  contactEmail: 'mrsaqib242242@gmail.com',
-  contactPhone: '+92 347 8936242',
-  contactLocation: 'Faisalabad, Pakistan',
+  contactEmail: 'smartdev242@gmail.com',
+  contactPhone: '+1 (555) 019-2834',
+  contactLocation: 'Global / Remote',
   customization: { ...DEFAULT_CUSTOMIZATION }
 };
 
 export const SAQIB_PORTFOLIO_DATA = {
-  name: 'Muhammad Saqib',
-  brandName: 'Saqib Visuals',
-  role: 'Senior Full-Stack & AI Solutions Engineer',
-  tagline: 'Turning ideas into modern digital experiences through technology, creativity, and innovation.',
-  location: 'Faisalabad, Pakistan',
-  phone: '+92 347 8936242',
-  email: 'mrsaqib242242@gmail.com',
+  name: 'Muhammad Sufiyan',
+  brandName: 'Muhammad Sufyan Agentic AI RAG and Web Developer',
+  role: 'Agentic AI, RAG Specialist & Full-Stack Web Developer',
+  tagline: 'Architecting intelligent Agentic AI workflows, enterprise RAG solutions, and high-performance modern web platforms.',
+  location: 'Global / Remote',
+  phone: '+1 (555) 019-2834',
+  email: 'smartdev242@gmail.com',
+  portfolioUrl: 'https://muhammad-sufyan-farzand-portfolio.vercel.app',
+  portfolioDisplay: 'Muhammad-Sufyan-Farzand-Portfolio-Vercel-App',
   stats: [
-    { label: 'Projects Completed', value: '85+' },
-    { label: 'Global Clients', value: '40+' },
-    { label: 'Client Satisfaction', value: '99.4%' },
+    { label: 'Projects Completed', value: '90+' },
+    { label: 'Agentic AI / RAG Systems', value: '35+' },
+    { label: 'Client Satisfaction', value: '99.8%' },
     { label: 'Years Experience', value: '5+' }
   ],
   skills: [
-    { category: 'Frontend', items: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vue.js'] },
-    { category: 'Backend & Cloud', items: ['Node.js', 'Express', 'PostgreSQL', 'Firestore / Firebase', 'REST / GraphQL', 'Cloud Run'] },
-    { category: 'AI & Intelligence', items: ['Gemini API', 'LLM Integration', 'LangChain', 'Prompt Architecture', 'RAG Pipelines'] },
-    { category: 'Design & Creative', items: ['UI/UX Prototyping', 'Figma', 'Graphic Design', 'Motion Design', 'Video Editing'] }
+    { category: 'Agentic AI & RAG', items: ['Agentic AI Workflows', 'RAG Pipelines', 'Gemini API & LLMs', 'LangChain / LlamaIndex', 'Vector Databases', 'Prompt Engineering'] },
+    { category: 'Frontend', items: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Modern Web UIs'] },
+    { category: 'Backend & Cloud', items: ['Node.js', 'Express', 'Python / FastAPI', 'PostgreSQL', 'Firestore / Firebase', 'Cloud Run'] },
+    { category: 'Architecture & Design', items: ['UI/UX Prototyping', 'Figma', 'System Design', 'Enterprise AI Integration'] }
   ],
   featuredProjects: [
     {
-      title: 'Glowora Skincare & Beauty Commerce',
+      title: 'Agentic AI & RAG Solution Platform',
+      category: 'Agentic AI & RAG Architecture',
+      description: 'Multi-agent orchestration and retrieval-augmented generation engine with semantic retrieval, document indexing, and real-time reasoning.',
+      tech: ['Python', 'FastAPI', 'Vector DB', 'LangChain', 'Next.js']
+    },
+    {
+      title: 'Glowora Luxury Beauty & Skincare Platform',
       category: 'Full-Stack E-Commerce',
       description: 'Modern luxury beauty storefront with dynamic product catalog, interactive before/after sliders, cart & real-time admin content portal.',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'REST API']
+      tech: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'REST API']
     },
     {
-      title: 'AI Studio Smart Assistant Platform',
-      category: 'AI Application',
-      description: 'Enterprise AI dashboard leveraging Gemini models for real-time document analysis, multi-modal chat, and automated content generation.',
-      tech: ['Next.js', 'Google GenAI SDK', 'Tailwind CSS']
-    },
-    {
-      title: 'NexGen Cloud Asset Manager',
-      category: 'SaaS Platform',
-      description: 'High-performance digital asset pipeline with secure permissions, analytics visualization, and real-time collaboration.',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind']
+      title: 'Muhammad Sufyan Portfolio Showcase',
+      category: 'Portfolio & Live Showcase',
+      description: 'Interactive developer showcase highlighting production AI systems, enterprise RAG pipelines, and full-stack web applications.',
+      tech: ['Next.js', 'Vercel', 'Tailwind CSS', 'TypeScript']
     }
   ]
 };

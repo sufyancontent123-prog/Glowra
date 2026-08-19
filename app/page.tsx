@@ -12,7 +12,6 @@ import SensitiveSkinSection from '@/components/SensitiveSkinSection';
 import PromoBanner1 from '@/components/PromoBanner1';
 import NaturalGlowSection from '@/components/NaturalGlowSection';
 import SerumUsagesSection from '@/components/SerumUsagesSection';
-import AntiPigmentationSection from '@/components/AntiPigmentationSection';
 import EssentialsKitBundleSection from '@/components/EssentialsKitBundleSection';
 import PromoBanner2 from '@/components/PromoBanner2';
 import BiggestLaunchSection from '@/components/BiggestLaunchSection';
@@ -30,6 +29,8 @@ import PortfolioModal from '@/components/PortfolioModal';
 import ContactModal from '@/components/ContactModal';
 import AdminModal from '@/components/AdminModal';
 import ToastContainer from '@/components/ToastContainer';
+import WhatsAppBookingModal from '@/components/WhatsAppBookingModal';
+import FloatingWhatsAppWidget from '@/components/FloatingWhatsAppWidget';
 
 export default function HomePage() {
   return (
@@ -60,9 +61,6 @@ export default function HomePage() {
           <NaturalGlowSection />
           <SerumUsagesSection />
 
-          {/* Anti-Pigmentation Catalyst */}
-          <AntiPigmentationSection />
-
           {/* Essentials Kit Bundles */}
           <EssentialsKitBundleSection />
 
@@ -91,6 +89,8 @@ export default function HomePage() {
         <PortfolioModal />
         <ContactModal />
         <AdminModal />
+        <WhatsAppBookingModal />
+        <FloatingWhatsAppWidget />
         <ToastContainer />
       </div>
     </StoreProvider>

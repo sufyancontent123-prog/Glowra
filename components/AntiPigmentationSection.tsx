@@ -109,7 +109,7 @@ export default function AntiPigmentationSection() {
               {/* Detail 3: Radiant Result */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-lg aspect-[3/4] border-2 border-white group">
                 <img
-                  src="https://images.unsplash.com/photo-1512290900672-1f02e1b12b50?q=80&w=600&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop"
                   alt="Clear radiant finish"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

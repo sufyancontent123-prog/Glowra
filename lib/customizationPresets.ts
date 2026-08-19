@@ -332,7 +332,7 @@ export const CURATED_IMAGE_LIBRARY: CuratedImagePreset[] = [
     id: 'skin-dropper-2',
     title: 'Botanical Vitamin C Pipette',
     category: 'Skincare Serums',
-    url: 'https://images.unsplash.com/photo-1608248597359-005cb2346743?q=80&w=900&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop',
     tag: 'Brightening'
   },
   {
@@ -449,13 +449,13 @@ export const DEFAULT_CUSTOMIZATION: SiteCustomization = {
     promoBanner2Image: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=700&auto=format&fit=crop',
     naturalGlowSectionImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=900&auto=format&fit=crop',
     sensitiveSkinSectionImage: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop',
-    antiPigmentationImage: 'https://images.unsplash.com/photo-1608248597359-005cb2346743?q=80&w=800&auto=format&fit=crop',
+    antiPigmentationImage: 'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop',
     essentialsKitImage: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop',
     biggestLaunchImage: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop',
     glowcareSecretImage: 'https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?q=80&w=800&auto=format&fit=crop',
     beforeImage: '/images/skin_before_acne_1786879205572.jpg',
     afterImage: '/images/skin_after_glow_1786879190967.jpg',
-    multipleUsagesImage: 'https://images.unsplash.com/photo-1608248597359-009f7a77ec81?q=80&w=800&auto=format&fit=crop',
+    multipleUsagesImage: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop',
     makeoverBannerImage: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=900&auto=format&fit=crop',
     categoryImages: {
       'skin-care': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=600&auto=format&fit=crop',

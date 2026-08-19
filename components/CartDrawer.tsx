@@ -4,6 +4,7 @@ import React from 'react';
 import { useStore } from '@/context/StoreContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Trash2, Plus, Minus, ArrowRight, ShoppingBag, Sparkles, Tag } from 'lucide-react';
+import { getCartOrderWhatsAppLink, DEFAULT_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export default function CartDrawer() {
   const {
@@ -245,18 +246,38 @@ export default function CartDrawer() {
                     </div>
                   </div>
 
-                  {/* Checkout Button */}
-                  <button
-                    id="cart-proceed-checkout-btn"
-                    onClick={() => {
-                      setIsCartOpen(false);
-                      setIsCheckoutModalOpen(true);
-                    }}
-                    className="w-full py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-pink-900/10 transition-all duration-200"
-                  >
-                    <span>Proceed to Checkout</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                  {/* Checkout & WhatsApp Buttons */}
+                  <div className="space-y-2">
+                    <button
+                      id="cart-proceed-checkout-btn"
+                      onClick={() => {
+                        setIsCartOpen(false);
+                        setIsCheckoutModalOpen(true);
+                      }}
+                      className="w-full py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-pink-900/10 transition-all duration-200"
+                    >
+                      <span>Proceed to Checkout</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+
+                    <button
+                      id="cart-whatsapp-checkout-btn"
+                      onClick={() => {
+                        const total = cartTotal + (isFreeShipping ? 0 : 4.99);
+                        const link = getCartOrderWhatsAppLink({
+                          items: cart.map((i) => ({ name: i.product.name, quantity: i.quantity, price: i.product.price })),
+                          totalAmount: total
+                        });
+                        window.open(link, '_blank');
+                      }}
+                      className="w-full py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-emerald-900/15 transition-all duration-200"
+                    >
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                      </svg>
+                      <span>Order / Book on WhatsApp</span>
+                    </button>
+                  </div>
 
                   <p className="text-[10px] text-center text-zinc-400">
                     🔒 Guaranteed 256-bit Secure Checkout • 100% Authentic

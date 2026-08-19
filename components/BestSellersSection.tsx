@@ -27,6 +27,7 @@ export default function BestSellersSection() {
     toggleWishlist,
     isInWishlist,
     setQuickViewProduct,
+    openWhatsAppBooking,
     addToast
   } = useStore();
 
@@ -433,13 +434,27 @@ export default function BestSellersSection() {
                       )}
                     </div>
 
-                    <button
-                      onClick={() => addToCart(product)}
-                      className="w-full py-2.5 px-3 rounded-full bg-pink-50 hover:bg-pink-600 text-pink-600 hover:text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all duration-200 group-hover:shadow-md"
-                    >
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Book Service</span>
-                    </button>
+                    <div className="grid grid-cols-5 gap-1.5">
+                      <button
+                        onClick={() => addToCart(product)}
+                        className="col-span-3 py-2 px-2.5 rounded-full bg-pink-50 hover:bg-pink-600 text-pink-700 hover:text-white text-xs font-bold flex items-center justify-center gap-1 transition-all duration-200"
+                        title="Add to Booking Bag"
+                      >
+                        <Sparkles className="w-3 h-3" />
+                        <span className="truncate">Book</span>
+                      </button>
+
+                      <button
+                        onClick={() => openWhatsAppBooking(product)}
+                        className="col-span-2 py-2 px-2 rounded-full bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white text-xs font-bold flex items-center justify-center gap-1 transition-all duration-200 border border-emerald-200 hover:border-emerald-600"
+                        title="Instant WhatsApp Booking"
+                      >
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                        </svg>
+                        <span className="text-[11px]">Chat</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </motion.div>

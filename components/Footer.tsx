@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { useStore } from '@/context/StoreContext';
-import { Sparkles, Heart, Mail, Phone, MapPin, Send, ShieldCheck, Truck, RefreshCw } from 'lucide-react';
+import { Sparkles, Heart, Mail, Phone, MapPin, Send, ShieldCheck, Truck, RefreshCw, Globe, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
-  const { openContactWithPrefill, setIsPortfolioModalOpen, setIsAdminModalOpen, settings } = useStore();
+  const { openContactWithPrefill, setIsPortfolioModalOpen, setIsAdminModalOpen, openWhatsAppBooking, settings } = useStore();
   const [newsletterEmail, setNewsletterEmail] = React.useState('');
   const [isSubscribed, setIsSubscribed] = React.useState(false);
 
@@ -67,21 +67,44 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed max-w-sm">
-              Formulating clinical-grade botanical skincare tailored for natural radiance and delicate skin barriers. Handcrafted with passion by <strong>Muhammad Saqib</strong> (Saqib Visuals).
+              Formulating clinical-grade botanical skincare tailored for natural radiance and delicate skin barriers. Handcrafted with passion by <strong>Muhammad Sufyan</strong> (Agentic AI RAG and Web Developer).
             </p>
 
             <div className="pt-2 space-y-2 text-xs text-zinc-600">
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-pink-600 shrink-0" />
-                <span>{settings.contactLocation || 'Faisalabad, Pakistan'}</span>
+                <span>{settings.contactLocation || 'Global / Remote'}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-pink-600 shrink-0" />
-                <span>{settings.contactPhone || '+92 347 8936242'}</span>
+                <span>{settings.contactPhone || '+1 (555) 019-2834'}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-pink-600 shrink-0" />
-                <span>{settings.contactEmail || 'mrsaqib242242@gmail.com'}</span>
+                <span>{settings.contactEmail || 'smartdev242@gmail.com'}</span>
+              </p>
+              <div className="pt-1">
+                <button
+                  onClick={() => openWhatsAppBooking(null, 'Salon Appointment & Skincare Consultation')}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] shadow-sm transition-all"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.016.82 3.125.82 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.485-4.464 9.949-9.969 9.949-1.748 0-3.385-.453-4.811-1.246l-5.22 1.359 1.385-5.064c-.87-1.487-1.354-3.218-1.354-5.058 0-5.485 4.464-9.949 9.969-9.949 5.506 0 9.969 4.464 9.969 9.949z" />
+                  </svg>
+                  <span>Chat &amp; Book on WhatsApp</span>
+                </button>
+              </div>
+              <p className="flex items-center gap-2 pt-1">
+                <Globe className="w-4 h-4 text-pink-600 shrink-0" />
+                <a
+                  href="https://muhammad-sufyan-farzand-portfolio.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-600 font-semibold hover:underline flex items-center gap-1 text-[11px]"
+                >
+                  <span>Muhammad-Sufyan-Farzand-Portfolio-Vercel-App</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </p>
             </div>
           </div>
@@ -95,24 +118,43 @@ export default function Footer() {
               <li><a href="#bestsellers" className="hover:text-pink-600 transition-colors">Best Sellers</a></li>
               <li><a href="#sensitive-skin" className="hover:text-pink-600 transition-colors">Sensitive Skin Care</a></li>
               <li><a href="#natural-glow" className="hover:text-pink-600 transition-colors">Peach 70 Niacin Serum</a></li>
-              <li><a href="#anti-pigmentation" className="hover:text-pink-600 transition-colors">Catalyst Brightening</a></li>
               <li><a href="#essentials-bundle" className="hover:text-pink-600 transition-colors">Curated Essentials Kit</a></li>
+              <li><a href="#glow-secrets" className="hover:text-pink-600 transition-colors">Glowcare Secrets</a></li>
             </ul>
           </div>
 
-          {/* Saqib Visuals Services */}
+          {/* Muhammad Sufyan Services */}
           <div className="space-y-3 text-xs">
             <h5 className="font-serif font-bold text-zinc-900 text-sm tracking-wider uppercase">
-              Saqib Visuals
+              Agentic AI & Web Dev
             </h5>
             <ul className="space-y-2 text-zinc-600">
               <li>
+                <a
+                  href="https://muhammad-sufyan-farzand-portfolio.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-600 font-bold hover:underline flex items-center gap-1"
+                >
+                  <span>Portfolio: Muhammad Sufyan</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
                 <button
                   onClick={() => setIsPortfolioModalOpen(true)}
-                  className="text-pink-600 font-semibold hover:underline flex items-center gap-1"
+                  className="text-zinc-700 font-medium hover:text-pink-600 transition-colors flex items-center gap-1"
                 >
-                  <span>Developer Portfolio</span>
-                  <Sparkles className="w-3 h-3" />
+                  <span>Interactive Bio & Skills</span>
+                  <Sparkles className="w-3 h-3 text-pink-500" />
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => openContactWithPrefill('Agentic AI & RAG Inquiry', 'AI Solution')}
+                  className="hover:text-pink-600 transition-colors text-left"
+                >
+                  Agentic AI & Enterprise RAG
                 </button>
               </li>
               <li>
@@ -120,23 +162,7 @@ export default function Footer() {
                   onClick={() => openContactWithPrefill('Web Development Consultation', 'Website Development')}
                   className="hover:text-pink-600 transition-colors text-left"
                 >
-                  Custom Next.js & React Apps
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => openContactWithPrefill('AI Solution Inquiry', 'AI Solution')}
-                  className="hover:text-pink-600 transition-colors text-left"
-                >
-                  AI Models & LLM Integration
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => openContactWithPrefill('UI/UX Design Inquiry', 'UI/UX Design')}
-                  className="hover:text-pink-600 transition-colors text-left"
-                >
-                  UI/UX Architecture & Figma
+                  Custom Next.js & Full-Stack Apps
                 </button>
               </li>
               <li>
@@ -190,7 +216,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 mt-4 border-t border-pink-200/60 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-          <p>© 2026 Glowora Beauty. Crafted by <strong>Muhammad Saqib</strong> (Saqib Visuals).</p>
+          <p>© 2026 Glowora Beauty. Crafted by <strong>Muhammad Sufyan</strong> (Muhammad Sufyan Agentic AI RAG and Web Developer).</p>
           <div className="flex items-center gap-4">
             <button
               onClick={() => openContactWithPrefill('Skincare Advice', 'Skincare Consultation')}

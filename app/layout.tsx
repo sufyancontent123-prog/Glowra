@@ -2,17 +2,17 @@ import type {Metadata} from 'next';
 import './globals.css'; // Global styles
 
 export const metadata: Metadata = {
-  title: 'Glowora & Saqib Visuals | Premium Beauty & Skincare',
-  description: 'Premium beauty and skincare e-commerce platform and portfolio featuring interactive product showcases and clinic-grade essentials.',
+  title: 'Glowora | Muhammad Sufyan Agentic AI RAG & Web Developer',
+  description: 'Premium beauty and skincare e-commerce platform and developer portfolio by Muhammad Sufiyan - Agentic AI, RAG and Full-Stack Web Developer.',
   openGraph: {
-    title: 'Glowora & Saqib Visuals',
-    description: 'Premium beauty and skincare e-commerce platform and portfolio.',
+    title: 'Glowora | Muhammad Sufyan Agentic AI & Web Developer',
+    description: 'Premium beauty and skincare e-commerce platform and developer portfolio.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Glowora & Saqib Visuals',
-    description: 'Premium beauty and skincare e-commerce platform and portfolio.',
+    title: 'Glowora | Muhammad Sufyan Agentic AI & Web Developer',
+    description: 'Premium beauty and skincare e-commerce platform and developer portfolio.',
   },
 };
 

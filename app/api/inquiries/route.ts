@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: 'Thank you! Your message has been safely recorded in our database. Muhammad Saqib / Glowora support will reach back shortly.',
+        message: 'Thank you! Your message has been safely recorded in our database. Muhammad Sufiyan / Glowora support will reach back shortly.',
         data: newInquiry
       },
       { status: 201 }

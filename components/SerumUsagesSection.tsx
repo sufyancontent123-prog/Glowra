@@ -46,7 +46,7 @@ export default function SerumUsagesSection() {
 
   const serumBottleSrc =
     customization?.images?.multipleUsagesImage ||
-    "https://images.unsplash.com/photo-1608248597359-009f7a77ec81?q=80&w=800&auto=format&fit=crop";
+    "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop";
 
   return (
     <section className="py-20 lg:py-28 bg-zinc-50/50 overflow-hidden">
